@@ -23,20 +23,20 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 	  > 레이아웃을 사용해 정적 웹사이트를 생성합니다.  
 	  > 사이트 URL 의 형식이나 어떤 데이터를 사이트에 표시할 것인지 등,  
 	  > 여러 동작을 조정할 수 있습니다.  
-	- [Jekyll 공식 도큐먼트](https://jekyllrb-ko.github.io/docs/)
+	- [Jekyll 공식 도큐먼트](https://jekyllrb-ko.github.io/docs/){:target="_blank"}
 
 ## 대상 독자
-- Github 계정이 있고 사이트에 로그인한 상태, [github 회원가입](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
-- docker 설치 되어있는 상태, [docker for windows 설치](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
-- git for windows 설치 되어있는 상태, [git for windows 설치](https://git-scm.com/download/win)
-- vscode가 설치되어 있는 상태(다른 에디터도 상관없다), [vscode 설치](https://code.visualstudio.com/)
+- Github 계정이 있고 사이트에 로그인한 상태, [github 회원가입](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home){:target="_blank"}
+- docker 설치 되어있는 상태, [docker for windows 설치](https://hub.docker.com/editions/community/docker-ce-desktop-windows/){:target="_blank"}
+- git for windows 설치 되어있는 상태, [git for windows 설치](https://git-scm.com/download/win){:target="_blank"}
+- vscode가 설치되어 있는 상태(다른 에디터도 상관없다), [vscode 설치](https://code.visualstudio.com/){:target="_blank"}
 
 ## Jekyll 테마 선택 및 포크
 - 설명
 	- Jekyll 공식 도큐먼트를 보고 내가 원하는 웹 사이트를 만들 수 있지만,  
 		다른 훌륭한 개발자가 만들어 둔 테마를 사용할 수도 있다.
 - 실행방법
-	- 웹 브라우저를 켜고 [Jekyll 테마 검색 사이트](http://jekyllthemes.org/)로 이동한다.
+	- 웹 브라우저를 켜고 [Jekyll 테마 검색 사이트](http://jekyllthemes.org/){:target="_blank"}로 이동한다.
 	- 원하는 테마를 검색하고 선택한다(나는 Chirpy를 선택했다).
 	- 여기서 홈페이지를 누른다.  
 		<a href="/assets/img/2020-10-23-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" target="_blank"><img src="/assets/img/2020-10-23-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" width="100%" height="100%">
@@ -189,8 +189,8 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 			```
 					
 ## 참고
-- [jekyll-theme-chirpy git repository](https://github.com/cotes2020/jekyll-theme-chirpy/tree/master)
-- [jekyll docker README](https://github.com/envygeeks/jekyll-docker/blob/master/README.md)
-- [Compile a Jekyll project without installing Jekyll or Ruby by using Docker](https://dev.to/michaelcompile-a-jekyll-project-without-installing-jekyll-or-ruby-by-using-docker-4184)
-- [Improving Jekyll build time](https://carlosbecker.com/posts/jekyll-build-time/)
+- [jekyll-theme-chirpy git repository](https://github.com/cotes2020/jekyll-theme-chirpy/tree/master){:target="_blank"}
+- [jekyll docker README](https://github.com/envygeeks/jekyll-docker/blob/master/README.md){:target="_blank"}
+- [Compile a Jekyll project without installing Jekyll or Ruby by using Docker](https://dev.to/michaelcompile-a-jekyll-project-without-installing-jekyll-or-ruby-by-using-docker-4184){:target="_blank"}
+- [Improving Jekyll build time](https://carlosbecker.com/posts/jekyll-build-time/){:target="_blank"}
 			
