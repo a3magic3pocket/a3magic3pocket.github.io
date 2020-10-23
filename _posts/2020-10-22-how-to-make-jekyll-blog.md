@@ -1,7 +1,7 @@
 ---
 title: Jekyll을 이용하여 Github 블로그 만들기(with windows, docker)
 date: 2020-10-23 12:56:00 +0900
-categories: Github blog
+categories: [Github blog]
 tags: [github blog, jekyll, windows, docker]    # TAG names should always be lowercase
 ---
 ## 개요
@@ -39,7 +39,7 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 	- 웹 브라우저를 켜고 [Jekyll 테마 검색 사이트](http://jekyllthemes.org/)로 이동한다.
 	- 원하는 테마를 검색하고 선택한다(나는 Chirpy를 선택했다).
 	- 여기서 홈페이지를 누른다.  
-		<a href="/assets/img/2020-10-22-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" target="_blank"></a><img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" width="100%" height="100%">
+		<a href="/assets/img/2020-10-22-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" target="_blank"><img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" width="100%" height="100%">
 	- Jekyll theme의 github repository가 뜨면 fork를 누른다.   
 	    <a href="/assets/img/2020-10-22-how-to-make-jekyll-blog/01-chirpy-github-fork.jpg" target="_blank"><img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/01-chirpy-github-fork.jpg" width="100%" height="100%">
 	- fork 뜬 repository에서 settings를 누른다.  
