@@ -39,13 +39,13 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 	- 웹 브라우저를 켜고 [Jekyll 테마 검색 사이트](http://jekyllthemes.org/)로 이동한다.
 	- 원하는 테마를 검색하고 선택한다(나는 Chirpy를 선택했다).
 	- 여기서 홈페이지를 누른다.  
-		<img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" width="70%" height="70%">
+		<img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/00-chirpy-jekyll-theme-site.jpg" width="70%" height="70%">
 	- Jekyll theme의 github repository가 뜨면 fork를 누른다.   
-	    <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/01-chirpy-github-fork.jpg" width="70%" height="70%">
+	    <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/01-chirpy-github-fork.jpg" width="70%" height="70%">
 	- fork 뜬 repository에서 settings를 누른다.  
-	    <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/02-forked-repo-settings.jpg" width="70%" height="70%">
+	    <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/02-forked-repo-settings.jpg" width="70%" height="70%">
 	- reposiory 이름을 [github user name].github.io로 바꾼다.  
-	   <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/03-rename-forked-repository.jpg" width="70%" height="70%">
+	   <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/03-rename-forked-repository.jpg" width="70%" height="70%">
 
 - 확인
 	- 5분 정도 기다린 후 [github user name].github.io로 접속해보면 테마 데모와 동일한 화면을 볼 수 있다.
@@ -57,7 +57,7 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 		명령어로 실행하는 환경(CLI)에 익숙하지 않는 유저라면 조금 어렵게 느낄 수도 있다.
 - 실행방법
 	- git bash를 실행한다.  
-	  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/06-run-git-bash.jpg" width="50%" height="50%">  
+	  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/06-run-git-bash.jpg" width="50%" height="50%">  
 	- 원하는 위치로 이동하고 디렉토리를 생성한다(여기서는 바탕화면에 git 디렉토리 생성)
 		```
 		> cd Deskop
@@ -66,7 +66,7 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 	- 여기서는 https 인증 방식으로 사용하도록 한다.
 	- fork 뜬 repository로 가서 https 링크를 복사한다.
 	- 클론 뜬다.  
-		<img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/04-forked-repo-clone.jpg" width="70%" height="70%">  
+		<img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/04-forked-repo-clone.jpg" width="70%" height="70%">  
 		```
 		> git clone [복사한 https 링크]
 		```
@@ -91,7 +91,7 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 		```
 	- repository를 확인한다.
 		- fork 뜬 repository로 가서 commit란을 확인하면 적용된 것을 확인할 수 있다.  
-		  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/05-check-new-commits.jpg" width="70%" height="70%">  
+		  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/05-check-new-commits.jpg" width="70%" height="70%">  
 		- 블로그 url로 접속하여 title이 변경된 것으로도 확인이 가능하다.
 
 ## 로컬 환경 구축
@@ -106,12 +106,12 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 - 실행방법
 	- docker 실행
 		- docker를 켠다.  
-		  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/07-run-docker.jpg" width="50%" height="50%">  
+		  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/07-run-docker.jpg" width="50%" height="50%">  
 		- cmd 창을 연다.  
-		  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/08-run-cmd.jpg" width="50%" height="50%">  
+		  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/08-run-cmd.jpg" width="50%" height="50%">  
 		- docker 실행 확인  
-		  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/09-docker-run-check.jpg" width="70%" height="70%">  
-		  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/10-docker-run-check-2.jpg" width="70%" height="70%">  
+		  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/09-docker-run-check.jpg" width="70%" height="70%">  
+		  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/10-docker-run-check-2.jpg" width="70%" height="70%">  
 		- 내 블로그 디렉토리로 이동  
 		  ```
 		  > cd [내 블로그 경로]
@@ -137,7 +137,7 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 			  다운로드 받아 캐싱한다.
 		- bundle config 수정
 			```
-			$ bundle config set path "./vendor/bundle"
+			$ bundle config set path "/vendor/bundle"
 			``` 
 		- Gemfile에 적힌 의존성 패키지 다운로드(최초 실행 시 오래 걸림)
 			```
@@ -149,8 +149,8 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 			- Gemfile도 수정해준다.
 		-  윈도우 개행문자 수정
 			```
-			$ find ./ -name *.sh -exec sed -i 's/\r$//g' {} \;
-			$ find ./ -name "Gemfile" -exec sed -i 's/\r$//g' {} \;
+			$ find / -name *.sh -exec sed -i 's/\r$//g' {} \;
+			$ find / -name "Gemfile" -exec sed -i 's/\r$//g' {} \;
 			```
 	- jekyll 로컬 서버 실행 및 종료
 		- 설명
@@ -166,7 +166,7 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 			```
 		- jekyl 로컬 서버 실행 확인
 			- 아래 화면이 나오면 로컬 서버가 실행 중인 것이다.  
-			  <img src="./assets/img/2020-10-22-how-to-make-jekyll-blog/11-run-local-server.jpg" width="65%" height="65%">  
+			  <img src="/assets/img/2020-10-22-how-to-make-jekyll-blog/11-run-local-server.jpg" width="65%" height="65%">  
 			- 웹 브라우저를 켜고 http://localhost:4000 로 들어가면 로컬 서버에서 빌드된  
 			  내 블로그를 확인할 수 있다.
 		- jekyll 로컬 서버 종료
