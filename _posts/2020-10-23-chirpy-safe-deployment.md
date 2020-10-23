@@ -1,6 +1,6 @@
 ---
 title: Jekyll-theme-Chirpy의 안전한 배포
-date: 2020-10-23 12:56:00 +0900
+date: 2020-10-23 17:35:00 +0900
 categories: [Github blog]
 tags: [github blog, jekyll, deployment]    # TAG names should always be lowercase
 ---

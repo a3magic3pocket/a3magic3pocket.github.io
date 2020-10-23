@@ -13,8 +13,8 @@ tags: [github blog, jekyll, windows, docker]    # TAG names should always be low
 	- 오직 정적 파일로만 이루어진 웹 사이트
 	- 정적 파일을 호스팅 서버에 올리고, 웹 서버(ex. 아파치 웹 서버, nginx) 설정 및 실행시키면,  
 		외부에서 호스팅 서버의 웹 서버로 접근하여 웹 사이트를 확인할 수 있게 된다. 	
-	- Github이 호스팅 서버 역할을 해줌으로 우리는 Jekyll로 정적 파일만 생성하여 업로드하면  
-		자동으로 Github 서버에서 우리 정적 파일을 호스팅해준다.
+	- Github이 호스팅 서버 역할을 해줌으로 우리는 Jekyll 파일만 생성하여 업로드하면  
+		자동으로 Github 서버에서 자동으로 빌드하여 호스팅해준다.
 - Jekyll 이란?
 	- Ruby 언어로 만들어진 정적 사이트 생성기
 	- > __*Jkyll 공식 도큐먼트에서의 Jekyll 정의*__  
