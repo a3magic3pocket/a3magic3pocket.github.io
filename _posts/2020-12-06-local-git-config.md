@@ -2,7 +2,7 @@
 title: local git repository에서 git user 세팅
 date: 2020-10-23 17:35:00 +0900
 categories: [Git]
-tags: [git, github, ssh]    # TAG names should always be lowercase
+tags: [git, ssh]    # TAG names should always be lowercase
 ---
 ## 개요
 - 가끔씩 clone 한 git repo에 user setting이 되지 않아서  
