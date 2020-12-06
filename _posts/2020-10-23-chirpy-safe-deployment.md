@@ -53,6 +53,7 @@ tags: [github blog, jekyll, deployment]    # TAG names should always be lowercas
     - [Chirpy github repository README.md](https://github.com/cotes2020/jekyll-theme-chirpy/tree/master){:target="_blank"}의 DEPLOYMENT 섹션에 잘 나와있다.
     - 더 자세한 사항은 위의 README.md를 참고하면 된다.
 - 실행방법
+    - _config.yml을 열고 url이 'https://username.github.io' 형태로 등록되었는지 확인한다(개인 계정만 해당)
     - fork 뜬 repository로 가서 settings를 클릭한다.  
       <a href="/assets/img/2020-10-23-chirpy-safe-deployment/00-forked-repo-settings.jpg" target="_blank"><img src="/assets/img/2020-10-23-chirpy-safe-deployment/00-forked-repo-settings.jpg" width="80%" height="80%"> 
     - 왼쪽 사이드 바에 options를 선택하고(settings 첫 화면이 options이다.)  
