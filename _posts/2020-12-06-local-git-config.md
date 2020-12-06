@@ -26,6 +26,5 @@ tags: [git, ssh]    # TAG names should always be lowercase
         email = id1@gmail.com
     ```
         
-# 참고
 ## 참고
 - [깃(git) - 프로젝트/저장소마다 다른 계정 정보 사용하기](https://gist.github.com/jexchan/2351996){:target="_blank"}
