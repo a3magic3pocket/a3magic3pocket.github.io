@@ -1,6 +1,6 @@
 ---
 title: 한 pc에 여러 github id ssh 키 등록하기
-date: 2020-10-23 17:35:00 +0900
+date: 2020-12-06 12:58:00 +0900
 categories: [Git]
 tags: [git, github, ssh]    # TAG names should always be lowercase
 ---

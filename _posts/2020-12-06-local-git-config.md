@@ -1,6 +1,6 @@
 ---
 title: local git repository에서 git user 세팅
-date: 2020-10-23 17:35:00 +0900
+date: 2020-12-06 12:58:00 +0900
 categories: [Git]
 tags: [git, ssh]    # TAG names should always be lowercase
 ---

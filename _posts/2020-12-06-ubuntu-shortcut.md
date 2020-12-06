@@ -1,6 +1,6 @@
 ---
 title: 우분투 자주 쓰는 명렁어 모음
-date: 2020-12-06 17:35:00 +0900
+date: 2020-12-06 12:58:00 +0900
 categories: [Shortcut]]
 tags: [ubuuntu]    # TAG names should always be lowercase
 ---
