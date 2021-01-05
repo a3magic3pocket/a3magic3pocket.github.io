@@ -48,7 +48,7 @@ tags: [realme x, unlock, unbrick, custom rom]    # TAG names should always be lo
 
 ## 기타 참고하면 좋은 사이트
 - 링크
-    - [Go Back to Stock ROM | Stock Recovery](https://forum.xda-developers.com/t/guide-go-back-to-stock-rom-stock-recovery.3974607/){:target="_blank"}
+    - [Go Back to Stock ROM](https://forum.xda-developers.com/t/guide-go-back-to-stock-rom-stock-recovery.3974607/){:target="_blank"}
     - [How to Unbrick Realme Phones (Fix Bootloop & Bricked Phones)](https://www.ytechb.com/how-to-unbrick-realme-phones-fix-bootloop-bricked-phones/){:target="_blank"}
     - [software-update](https://www.realme.com/in/support/software-update){:target="_blank"}에서 How to update? 클릭
 - 설명
@@ -62,6 +62,6 @@ tags: [realme x, unlock, unbrick, custom rom]    # TAG names should always be lo
 - [realme x 언락 및 커스텀 롬 설치](https://a3magic3pocket.github.io/posts/realme-x-unlock-and-install-custom-rom/){:target="_blank"}
 - [software-update](https://www.realme.com/in/support/software-update){:target="_blank"}
 - [realme Flash tool Tutorial for realme X(realme UI based on Android 10)](https://c.realme.com/in/post-details/1280819845490802688){:target="_blank"}
-- [Go Back to Stock ROM | Stock Recovery](https://forum.xda-developers.com/t/guide-go-back-to-stock-rom-stock-recovery.3974607/){:target="_blank"}
+- [Go Back to Stock ROM](https://forum.xda-developers.com/t/guide-go-back-to-stock-rom-stock-recovery.3974607/){:target="_blank"}
 - [How to Unbrick Realme Phones (Fix Bootloop & Bricked Phones)](https://www.ytechb.com/how-to-unbrick-realme-phones-fix-bootloop-bricked-phones/){:target="_blank"}
 - [software-update](https://www.realme.com/in/support/software-update){:target="_blank"}
