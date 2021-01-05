@@ -1,6 +1,6 @@
 ---
 title: realme x stock rom으로 복구
-date: 2021-01-05 18:00:00 +0900
+date: 2021-01-05 12:00:00 +0900
 categories: [Android]
 tags: [realme x, unlock, unbrick, custom rom]    # TAG names should always be lowercase
 ---
