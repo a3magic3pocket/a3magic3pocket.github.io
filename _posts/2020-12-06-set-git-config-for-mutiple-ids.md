@@ -23,11 +23,11 @@ tags: [git, github, ssh]    # TAG names should always be lowercase
         ```
     - id1 ssh 키 생성
         ```
-        $ ssh-keygen -t rsa -c "id1@gmail.com" -f "[ssh 디렉토리 경로]/rsa-id1"
+        $ ssh-keygen -t rsa -C "id1@gmail.com" -f "[ssh 디렉토리 경로]/rsa-id1"
         ```
     - id2 ssh 키 생성
         ```
-        $ ssh-keygen -t rsa -c "id2@gmail.com" -f "[ssh 디렉토리 경로]/rsa-id2"
+        $ ssh-keygen -t rsa -C "id2@gmail.com" -f "[ssh 디렉토리 경로]/rsa-id2"
         ```
     - 생성 확인
         ```
