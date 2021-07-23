@@ -17,7 +17,7 @@ timezone: Asia/Seoul
 # --------------------------
 title: 의사줌치                          # the main title
 
-tagline: 부정확한 정보를 | 담고 있을 수 있습니다.   # it will display as the sub-title
+tagline: 부정확한 정보를 <br /> 담고 있을 수 있습니다.   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   기억 안 날 때 보는 꾀주머니.
