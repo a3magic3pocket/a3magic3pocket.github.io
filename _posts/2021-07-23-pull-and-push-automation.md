@@ -1,8 +1,8 @@
 ---
 title: git push 시 자동으로 pull and push하는 shell script 작성
-date: 2021-07-23 13:37:00 +0900
+date: 2021-07-23 18:37:00 +0900
 categories: [Shell]
-tags: [shellscript, git] # TAG names should always be lowercase
+tags: [shell script, git] # TAG names should always be lowercase
 ---
 
 ## 개요
