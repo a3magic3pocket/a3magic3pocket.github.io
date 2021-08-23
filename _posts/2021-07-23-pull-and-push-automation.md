@@ -194,7 +194,7 @@ tags: [shell script, git] # TAG names should always be lowercase
 ## pull_and_push 함수 설명
 - 주요 로직이 포함된 함수이다.
 - git pull --rebase upstream dev 2>&1
-    - [2>&1 이해하기]{https://blogger.pe.kr/369}를 먼저 읽으면 좋다.
+    - [2>&1 이해하기](https://blogger.pe.kr/369)를 먼저 읽으면 좋다.
     - 2는 파일디스트럭터 중 하나로 표준에러를 의미한다.
     - 1은 파일디스트럭터 중 하나로 표준출력을 의미한다.
     - 2>&1을 쓰면 표준에러를 표준출력으로 보내겠다는 뜻이다.
@@ -203,3 +203,15 @@ tags: [shell script, git] # TAG names should always be lowercase
     - 변수이름=\`명령\`
     - 따라서 result=\`git pull --rebase upstream dev 2>&1\`는   
       git pull --rebase 명령 실행 결과(표준출력, 표준에러 포함)가 result 변수에 저장된다.
+
+## 참고
+- [substring 포함 여부 확인](https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash)
+- [stderr를 stdout으로 변경하는 명령](https://stackoverflow.com/questions/637827/redirect-stderr-and-stdout-in-bash)
+- [shell script 명령 결과 할당](https://stackoverflow.com/questions/4651437/how-do-i-set-a-variable-to-the-output-of-a-command-in-bash)
+- [shell script sleep 명령](https://brocess.tistory.com/84)
+- [funciton 리턴 변수](https://stackoverflow.com/questions/8742783/returning-value-from-called-function-in-a-shell-script/8743103)
+- [shell equal](https://stackoverflow.com/questions/20449543/shell-equality-operators-eq)
+- [kldp](https://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/string-manipulation.html)
+- [리눅스 \$?](https://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_$%3F)
+- [shebang bash](https://blog.gaerae.com/2015/10/what-is-the-preferred-bash-shebang.html)
+- [unix shell의 stdout, stderr](https://velog.io/@jakeseo_me/%EC%9C%A0%EB%8B%89%EC%8A%A4%EC%9D%98-stdin-stdout-stderr-%EA%B7%B8%EB%A6%AC%EA%B3%A0-pipes%EC%97%90-%EB%8C%80%ED%95%B4-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90)
