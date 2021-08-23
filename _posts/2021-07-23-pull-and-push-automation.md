@@ -175,6 +175,7 @@ tags: [shell script, git] # TAG names should always be lowercase
             함수이름
             echo "$?" # 이 스크립트를 실행하면 9가 출력된다.
             ```
+
 ## is_succeeded_git_command 함수 설명
 - 깃 명령어 실행결과 문자열을 받아 성공 여부를 체크하는 함수이다.
 - bash shell에서는 boolean type으로 true, false을 사용하나  
@@ -197,7 +198,7 @@ tags: [shell script, git] # TAG names should always be lowercase
     - 2는 파일디스트럭터 중 하나로 표준에러를 의미한다.
     - 1은 파일디스트럭터 중 하나로 표준출력을 의미한다.
     - 2>&1을 쓰면 표준에러를 표준출력으로 보내겠다는 뜻이다.
-    - 2>&1이 없으면 에러가 표준출력으로 변환되지 않기 때문에 '|' 등의 문법을 쓸 수 없다.
+    - 2>&1이 없으면 에러가 표준출력으로 변환되지 않기 때문에 '\|' 등의 문법을 쓸 수 없다.
 - 명령어 표준출력을 변수에 할당
     - 변수이름=\`명령\`
     - 따라서 result=\`git pull --rebase upstream dev 2>&1\`는   
