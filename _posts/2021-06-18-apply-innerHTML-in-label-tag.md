@@ -74,7 +74,7 @@ tags: [javascript, golang] # TAG names should always be lowercase
         </head>
         <body>
             <input type="checkbox" id="test-input" />
-            <label for="test-input">{{ .testText }}</label>
+            <label for="test-input">{% raw %}{{ .testText }}{% endraw %}</label>
         </body>
         </html>
         ~~~
@@ -108,7 +108,7 @@ tags: [javascript, golang] # TAG names should always be lowercase
         </head>
         <body>
             <input type="checkbox" id="test-input" />
-            <label for="test-input">{{ .testText }}</label>
+            <label for="test-input">{% raw %}{{ .testText }}{% endraw %}</label>
             <script type="text/javascript">
                 document.addEventListener("DOMContentLoaded", function () {
                     reAssignTestInputLabel();
