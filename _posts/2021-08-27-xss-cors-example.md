@@ -162,9 +162,9 @@ tags: [gonic-gin, cors, xss] # TAG names should always be lowercase
   - 공격 성공
     - 게시판A 사용자의 Cookie와 Authorization 헤더가 공격자B 서버로 넘어왔다.
     - 게시판A 사용자의 네트워크 처리 상황  
-      - <a href="/assets/img/2021-08-25-xss-cors-example/00-request-trap-success.jpg" target="_blank"><img src="/assets/img/2021-08-25-xss-cors-example/00-request-trap-success.jpg" width="100%"></a> 
+      - <a href="/assets/img/2021-08-27-xss-cors-example/00-request-trap-success.jpg" target="_blank"><img src="/assets/img/2021-08-27-xss-cors-example/00-request-trap-success.jpg" width="100%"></a> 
     - 공격자B 서버 쉘 로그
-      - <a href="/assets/img/2021-08-25-xss-cors-example/01-listen-trap-request-success.jpg" target="_blank"><img src="/assets/img/2021-08-25-xss-cors-example/01-listen-trap-request-success.jpg" width="100%"></a> 
+      - <a href="/assets/img/2021-08-27-xss-cors-example/01-listen-trap-request-success.jpg" target="_blank"><img src="/assets/img/2021-08-27-xss-cors-example/01-listen-trap-request-success.jpg" width="100%"></a> 
 
 ## 실험변형 1. 공격자B의 hostname 변경
 - 실험의 맹점
@@ -242,13 +242,13 @@ tags: [gonic-gin, cors, xss] # TAG names should always be lowercase
 - 공격 일부 실패
   - Authorization 헤더는 받아왔지만, Cookie를 받는데에는 실패했다.
   - 공격자B 서버 쉘 로그
-    - <a href="/assets/img/2021-08-25-xss-cors-example/03-listen-trap-request-hostname-changed.jpg" target="_blank"><img src="/assets/img/2021-08-25-xss-cors-example/03-listen-trap-request-hostname-changed.jpg" width="100%"></a> 
+    - <a href="/assets/img/2021-08-27-xss-cors-example/03-listen-trap-request-hostname-changed.jpg" target="_blank"><img src="/assets/img/2021-08-27-xss-cors-example/03-listen-trap-request-hostname-changed.jpg" width="100%"></a> 
 
 ## 실험변형 2. 카카오 소셜로그인 서비스 공격
 - 의문
   - 카카오 소셜로그인은 RestAPI 방식과 javascript 팝업 방식(이하 팝업 방식)으로 제공된다.
   - 팝업 방식을 사용하면 카카오 인증정보가 쿠키로 저장된다.
-  - <a href="/assets/img/2021-08-25-xss-cors-example/04-kakao-auth-cookie.jpg" target="_blank"><img src="/assets/img/2021-08-25-xss-cors-example/04-kakao-auth-cookie.jpg" width="100%"></a>  
+  - <a href="/assets/img/2021-08-27-xss-cors-example/04-kakao-auth-cookie.jpg" target="_blank"><img src="/assets/img/2021-08-27-xss-cors-example/04-kakao-auth-cookie.jpg" width="100%"></a>  
     위에서 보이는 쿠키들을 그대로 복사한 뒤, 카카오 인증을 하지 않은 다른 브라우저에 입력하고  
     카카오 서비스에 접속해보면 로그인이 된다.
   - 과연 이전 실험과 같은 방법으로 카카오 인증정보를 가져올 수 있을까?
@@ -347,10 +347,10 @@ tags: [gonic-gin, cors, xss] # TAG names should always be lowercase
 ## 카카오 소셜로그인 서비스 공격 실험결과
 - 실패
   - 공격자B로 쿠키에 담긴 카카오 계정정보가 전송되지 않았다.
-  - <a href="/assets/img/2021-08-25-xss-cors-example/05-listen-trap-kakako-auth.jpg" target="_blank"><img src="/assets/img/2021-08-25-xss-cors-example/05-listen-trap-kakako-auth.jpg" width="100%"></a>  
+  - <a href="/assets/img/2021-08-27-xss-cors-example/05-listen-trap-kakako-auth.jpg" target="_blank"><img src="/assets/img/2021-08-27-xss-cors-example/05-listen-trap-kakako-auth.jpg" width="100%"></a>  
 - 이유
   - 카카오 인증정보 쿠키를 보면 domain이 localhost가 아니다.  
-  - <a href="/assets/img/2021-08-25-xss-cors-example/06-check-kakao-auth-cookie-domain.jpg" target="_blank"><img src="/assets/img/2021-08-25-xss-cors-example/06-check-kakao-auth-cookie-domain.jpg" width="100%"></a>  
+  - <a href="/assets/img/2021-08-27-xss-cors-example/06-check-kakao-auth-cookie-domain.jpg" target="_blank"><img src="/assets/img/2021-08-27-xss-cors-example/06-check-kakao-auth-cookie-domain.jpg" width="100%"></a>  
   - [쿠키의 동일출처정책](https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy#%EA%B5%90%EC%B0%A8_%EC%B6%9C%EC%B2%98_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%A0%80%EC%9E%A5%EC%86%8C_%EC%A0%91%EA%B7%BC)에 의해 브라우저는  
     공격자B의 서버와 카카오 인증정보 쿠키를 할당한 서버가 다르다고 판명하고  
     공격자B로의 AJAX 요청에 카카오 인증정보를 보내지 않은 것이다.
