@@ -1,5 +1,5 @@
 ---
-title: CORS를 이용한 XSS 공격 예시(카카오 로그인)
+title: CORS를 이용한 XSS 공격 실험(카카오 로그인)
 date: 2021-08-27 18:01:00 +0900
 categories: [Web]
 tags: [gonic-gin, cors, xss] # TAG names should always be lowercase
