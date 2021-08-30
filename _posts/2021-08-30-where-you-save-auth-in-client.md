@@ -39,7 +39,8 @@ tags: [golang, react, js, jwt] # TAG names should always be lowercase
       when a malicious web site, email, blog, instant message, or   
       program causes a user's web browser to perform an unwanted action  
       on a trusted site when the user is authenticated.
-    - 브라우저에서 우리 서비스에 로그인 한 상태라면 인증정보가 담긴 JWT가 쿠키(httpOnly 설정)로 저장된다.  
+    - 브라우저에서 우리 서비스에 로그인 한 상태라면  
+      인증정보가 담긴 JWT가 쿠키(httpOnly 설정)로 저장된다.  
     - 이 상태에서 사용자가 피싱 메일 열람 등을 통해 우리 서비스로 아래와 같은 작업을 하면 작동한다.
         - 서비스 탈퇴 요청
         - 사용자 정보 조회
