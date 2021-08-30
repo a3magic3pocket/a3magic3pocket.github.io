@@ -61,15 +61,15 @@ tags: [golang, react, js, jwt] # TAG names should always be lowercase
         피싱 요청의 경우 난수 등록 쿠키가 조회되지 않을 것이다.
         - 따라서 서버 단에서는 요청의 난수 등록 쿠키와 난수 등록 헤더를 불러와 동일 여부만 확인한다.
     
-- 결론
-    - 프론트에서는 JWT를 httpOnly 설정하고 Cookie에 저장하는 방법이 가장 안전한 것 같다.
-    - CRSF 문제가 생길 수 있으므로 Referer 체크와 Double Submit Cookie 체크를  
-      백엔드에서 구현하여 대비한다. 
+## 결론
+- 프론트에서는 JWT를 httpOnly 설정하고 Cookie에 저장하는 방법이 가장 안전한 것 같다.
+- CRSF 문제가 생길 수 있으므로 Referer 체크와 Double Submit Cookie 체크를  
+  백엔드에서 구현하여 대비한다. 
 
-- 참고
-    - [4장. JWT 이해 및 적용](https://backend-intro.vlpt.us/4/)
-    - [동일출처정책](https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy#%EA%B5%90%EC%B0%A8_%EC%B6%9C%EC%B2%98_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%A0%80%EC%9E%A5%EC%86%8C_%EC%A0%91%EA%B7%BC)
-    - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
-    - [CSRF 공격이란? 그리고 CSRF 방어 방법](https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95)
+## 참고
+- [4장. JWT 이해 및 적용](https://backend-intro.vlpt.us/4/)
+- [동일출처정책](https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy#%EA%B5%90%EC%B0%A8_%EC%B6%9C%EC%B2%98_%EB%8D%B0%EC%9D%B4%ED%84%B0_%EC%A0%80%EC%9E%A5%EC%86%8C_%EC%A0%91%EA%B7%BC)
+- [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [CSRF 공격이란? 그리고 CSRF 방어 방법](https://itstory.tk/entry/CSRF-%EA%B3%B5%EA%B2%A9%EC%9D%B4%EB%9E%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-CSRF-%EB%B0%A9%EC%96%B4-%EB%B0%A9%EB%B2%95)
 
 
