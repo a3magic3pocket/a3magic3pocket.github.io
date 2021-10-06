@@ -284,6 +284,27 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
       ```
   - 결과
     - <a href="/assets/img/2021-10-05-elk-container-example/02-api-local.jpg" target="_blank"><img src="/assets/img/2021-10-05-elk-container-example/02-api-local.jpg" width="70%"></a> 
+- filebeat.yml
+  - 개요
+    - 로그 파일을 읽어 logstash로 보내므로 filebeat.inputs: type은 filestream을 사용한다.
+    - logstash에서 파일을 구분할 수 있도록 태그를 달아준다.
+      - gin.log는 gin으로 달아준다.
+  - 파일
+    - ```yml
+      filebeat.inputs:
+      - type: filestream
+        enabled: true
+        paths:
+          - /root/api/gin.log
+        tags: ["gin"]
+
+      output.logstash:
+        hosts: ["${LOGSTASH_IP:=localhost}:5044"]
+
+      logging.level: debug
+      logging.to_stderr: true
+      logging.to_syslog: true
+      ```
 - Dockerfile 작성
   - 개요
     - api 서버 내에 filebeat도 설치해야하기 때문에    
@@ -483,6 +504,33 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
     - main.html을 더블클릭하면 브라우저에서 불러올 수 있다.
   - 결과
     - <a href="/assets/img/2021-10-05-elk-container-example/03-front-local.jpg" target="_blank"><img src="/assets/img/2021-10-05-elk-container-example/03-front-local.jpg" width="70%"></a> 
+- filebeat.yml
+  - 개요
+    - 로그 파일을 읽어 logstash로 보내므로 filebeat.inputs: type은 filestream을 사용한다.
+    - logstash에서 파일을 구분할 수 있도록 태그를 달아준다.
+      - access.log는 nginx-access로, error.log는 nginx-error로 달아준다.
+  - 파일
+    - ```yml
+      filebeat.inputs:
+      - type: filestream
+        enabled: true
+        paths:
+          - /var/log/nginx/access.log
+        tags: ["nginx-access"]
+
+      - type: filestream
+        enabled: true
+        paths:
+          - /var/log/nginx/error.log
+        tags: ["nginx-error"]
+
+      output.logstash:
+        hosts: ["${LOGSTASH_IP:=localhost}:5044"]
+
+      logging.level: debug
+      logging.to_stderr: true
+      logging.to_syslog: true
+      ```
 - Dockerfile 작성
   - 개요
     - front 서버 내에 filebeat도 설치해야하기 때문에    
