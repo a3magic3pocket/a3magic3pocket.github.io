@@ -365,6 +365,7 @@ tags: [elk, elasticsearch, logstash, kibana] # TAG names should always be lowerc
     }
     ...
     ```
+    
 ## Elasticsearch로 후암동의 평균 공동주택 공시가격 계산
 - ```bash
   $ curl http://localhost:9200/realty/_search?pretty -d '{
