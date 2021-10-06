@@ -301,7 +301,7 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
 
       output.logstash:
         hosts: ["${LOGSTASH_IP:=localhost}:5044"]
-        
+
       logging.level: debug
       logging.to_stderr: true
       logging.to_syslog: true
@@ -698,6 +698,8 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
   filebeat input을 s3에서 불러와 로그분석을 할 것 같다.
 - 실험에는 총 5개의 컨테이너가 생성되었는데,  
   내 pc에서 해당 컨테이너들을 돌리는데 소비하는 램은 ddr3 12gb였다.
+- 나중에는 docker-compose.yml 파일로 만들어두는 것이 편할 것 같다.
+- kubernetes 위에 올려서 쓰는 경우도 많은 것 같으니 실험해보면 재밌을 듯.
 
 ## 참고
 - [filebeat input docker](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-input-docker.html)
