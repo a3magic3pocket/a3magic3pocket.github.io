@@ -291,6 +291,7 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
       - gin.log는 gin으로 달아준다.
   - 파일
     - ```yml
+
       filebeat.inputs:
       - type: filestream
         enabled: true
@@ -300,10 +301,11 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
 
       output.logstash:
         hosts: ["${LOGSTASH_IP:=localhost}:5044"]
-
+        
       logging.level: debug
       logging.to_stderr: true
       logging.to_syslog: true
+
       ```
 - Dockerfile 작성
   - 개요
@@ -511,6 +513,7 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
       - access.log는 nginx-access로, error.log는 nginx-error로 달아준다.
   - 파일
     - ```yml
+
       filebeat.inputs:
       - type: filestream
         enabled: true
@@ -530,6 +533,7 @@ tags: [docker, container, filebeat, elk, elasticsearch, logstash, kibana] # TAG 
       logging.level: debug
       logging.to_stderr: true
       logging.to_syslog: true
+
       ```
 - Dockerfile 작성
   - 개요
