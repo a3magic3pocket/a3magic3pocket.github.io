@@ -37,7 +37,7 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
     - logstash input에서 아래와 같은 문장이 왔다고 하자.
         - kimsumi is king
     - 아래와 같은 grok 패턴을 사용했다.
-        - %{DATA:s} %{DATA:v} %{DATA:o}
+        - %{WORD:s} %{WORD:v} %{WORD:o}
     - 결과
         - s 변수에 "kimsumi" 할당
         - v 변수에 "is" 할당
