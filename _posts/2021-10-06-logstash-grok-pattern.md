@@ -27,20 +27,21 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
 - SYNTAX 사용법
     - 기본 패턴 사전
         - [logstash 기본 패턴 사전](https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns)에 등록된 패턴을 SYNTAX로 쓸 수 있다.
-        - 예를 들어 단어를 SYNTAX로 쓰고 싶은 경우, SYNTAX로 DATA를 쓸 수 있다.
-        - 기본 패턴 사전에 등록된 DATA의 정규식은 DATA .*?이다.
+        - 예를 들어 단어를 SYNTAX로 쓰고 싶은 경우, SYNTAX로 WORD를 쓸 수 있다.
+        - 기본 패턴 사전에 등록된 WORD의 정규식은 WORD \b\w+\b이다.
     - 커스텀 패턴 사전
         - logstash는 /usr/share/logstash/pipeline/(이하 pipeline) 디렉토리에서 설정파일을 둔다.
         - grok 패턴 사전의 경우, pipeline 디렉토리 하위에 patterns 디렉토리를 만들고 그 안에 파일을 넣어 사용한다.
         - 파일은 확장자 없이 생성하며, 모든 파일이 logstash에 import 된다.
 - 예시
     - logstash input에서 아래와 같은 문장이 왔다고 하자.
-        - 김수미 킹왕짱
+        - kimsumi is king
     - 아래와 같은 grok 패턴을 사용했다.
-        - %{DATA:kimsumi} %{DATA:king}
+        - %{DATA:s} %{DATA:v} %{DATA:o}
     - 결과
-        - kimsumi 변수에 "김수미" 할당
-        - king 변수에 "킹왕짱" 할당
+        - s 변수에 "kimsumi" 할당
+        - v 변수에 "is" 할당
+        - o 변수에 "king" 할당
 
 ## Test Grok Patterns
 - 개요
@@ -53,6 +54,13 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
     - <a href="/assets/img/2021-10-06-logstash-grok-pattern/00-grok-pattern-test.jpg" target="_blank"><img src="/assets/img/2021-10-06-logstash-grok-pattern/00-grok-pattern-test.jpg" width="100%"></a> 
 - 결과
     - <a href="/assets/img/2021-10-06-logstash-grok-pattern/01-grok-pattern-test-result.jpg" target="_blank"><img src="/assets/img/2021-10-06-logstash-grok-pattern/01-grok-pattern-test-result.jpg" width="100%"></a>
+
+## 정규식 연습
+- 개요
+    - test grok patterns에서 실험해보기 전에 정규식이 맞는지부터 확인하면 좋다.
+    - 여러 정규식 패턴 연습 사이트 중 자주 쓰는 곳이다. [링크](https://regexr.com/)
+- 실험모습
+    - <a href="/assets/img/2021-10-06-logstash-grok-pattern/02-regex-example.jpg" target="_blank"><img src="/assets/img/2021-10-06-logstash-grok-pattern/02-regex-example.jpg" width="100%"></a>
 
 ## gin log 파싱해보기
 - gin log 예시
