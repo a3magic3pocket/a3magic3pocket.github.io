@@ -56,10 +56,10 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
 
 ## gin log 파싱해보기
 - gin log 예시
-    - [GIN] 2021/10/05 - 09:04:47 | 200 |            0s |             ::1 | GET      "/now"
+    - [GIN] 2021/10/05 - 09:04:47 \| 200 \|            0s \|             ::1 \| GET      "/now"
     - "김수미 킹왕짱" 예시보다 복잡하지만,  
       기본 패턴 사전을 잘 활용하여 커스텀 패턴을 만들어 해결할 수 있다.
-    - grok에서 "[", "]", '"', "|"는 escaping을 해줘야한다.
+    - grok에서 "[", "]", '"', "\|"는 escaping을 해줘야한다.
     - SEMANTIC를 대괄호를 사용하여 지정하면 계층식 변수 선언이 가능하다.
         - 예를 들어 [gin][type]으로 했다면 { gin: { type: somthing } } 식으로 할당된다.
         - !주의 - Test grok pattern에서는 대괄호를 사용한 SEMANTIC 선언이 되지 않는다.
@@ -75,10 +75,12 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
 - logstash config 디렉토리
     - 아래와 같은 구조로 디렉토리 및 파일을 만든다.
         - ```
+         
             - logstash
                 - patterns
                     - gin
                 - logstash.conf
+                 
             ```
     - gin grok 패턴
         - ```
@@ -152,3 +154,7 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
         }
         ...
         ```
+## 참고
+- [logstash grok 관련 문서](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html)
+- [logstash 기본 패턴 사전](https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns)
+- [test grok pattern](https://grokconstructor.appspot.com/do/match#result)
