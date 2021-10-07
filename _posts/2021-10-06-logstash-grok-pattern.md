@@ -154,6 +154,7 @@ tags: [logstash, grok, regular expression] # TAG names should always be lowercas
         }
         ...
         ```
+
 ## 참고
 - [logstash grok 관련 문서](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html)
 - [logstash 기본 패턴 사전](https://github.com/elastic/logstash/blob/v1.4.2/patterns/grok-patterns)
