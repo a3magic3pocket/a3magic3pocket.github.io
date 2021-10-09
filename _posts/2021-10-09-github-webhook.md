@@ -1,6 +1,6 @@
 ---
 title: github webhook을 이용한 원격서버 배포 자동화(AWS)
-date: 2021-10-06 17:25:00 +0900
+date: 2021-10-09 23:25:00 +0900
 categories: [git]
 tags: [github, webhook, deployment, aws] # TAG names should always be lowercase
 ---
