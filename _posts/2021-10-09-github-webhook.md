@@ -1,7 +1,7 @@
 ---
 title: github webhook을 이용한 원격서버 배포 자동화(AWS)
 date: 2021-10-09 23:25:00 +0900
-categories: [git]
+categories: [Git]
 tags: [github, webhook, deployment, aws] # TAG names should always be lowercase
 ---
 
@@ -113,8 +113,10 @@ tags: [github, webhook, deployment, aws] # TAG names should always be lowercase
     - <a href="/assets/img/2021-10-09-github-webhook/04-add-security-group-2.jpg" target="_blank"><img src="/assets/img/2021-10-09-github-webhook/04-add-security-group-2.jpg" width="100%"></a>
     - !주의 - 기존 ec2 보안그룹에 github webhook 보안그룹을 추가하는 방법과 위의 방법은 서로 다르다.
         - 기존 ec2 보안그룹의 하위에 github webhook 보안그룹을 추가하는 것은  
-          github webhook 보안그룹을 가진 ec2-2에서 기존 ec2 보안그룹을 가진 ec2-1에 요청하는 것을 허용한다는 의미이다.  
-          예를들어, rds에서 특정 ec2 접근을 허가하기 위해서는 rds 보안그룹에 해당 ec2 보안그룹을 추가해야 한다.  
+          github webhook 보안그룹을 가진 ec2-2에서 기존 ec2 보안그룹을  
+          가진 ec2-1에 요청하는 것을 허용한다는 의미이다.  
+          예를들어, rds에서 특정 ec2 접근을 허가하기 위해서는   
+          rds 보안그룹에 해당 ec2 보안그룹을 추가해야 한다.  
           [AWS RDS에 EC2 접속 허용하기](https://a3magic3pocket.github.io/posts/aws-rds-allow-ec2/)
 - webhook 받기 성공
     - 이제 local에서 코드를 수정한 후 add, commit, push를 하면 webhook이 작동됨을 확인할 수 있다.
