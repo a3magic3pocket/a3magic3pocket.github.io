@@ -109,67 +109,64 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
 
 # filebeat 정상 동작 확인
 1. 로그스태시 설치 및 실행
+    - 개요
+        - 로그스태시를 설치하고 input은 filebeat으로 output은 표준출력으로 지정한다.
+    - 로그스태시 설치
+        - ```bash
+            # 아래 사이트에서 Logstash 7.x 버전을 다운로드한다.
+            # (최신 버전은 8이지만 기존에 구축된 로그스태시가 7이라서 예제는 7 기준으로 적는다)
+            # https://www.elastic.co/kr/downloads/logstash
 
-- 개요
-    - 로그스태시를 설치하고 input은 filebeat으로 output은 표준출력으로 지정한다.
-- 로그스태시 설치
-    - ```bash
-        # 아래 사이트에서 Logstash 7.x 버전을 다운로드한다.
-        # (최신 버전은 8이지만 기존에 구축된 로그스태시가 7이라서 예제는 7 기준으로 적는다)
-        # https://www.elastic.co/kr/downloads/logstash
+            # os에 맞는 파일을 설치한다. (아래 예시는 centos 7 기준)
+            wget https://artifacts.elastic.co/downloads/logstash/logstash-7.12.1-linux-x86_64.tar.gz
+            tar xvzf ./logstash*.tar.gz
 
-        # os에 맞는 파일을 설치한다. (아래 예시는 centos 7 기준)
-        wget https://artifacts.elastic.co/downloads/logstash/logstash-7.12.1-linux-x86_64.tar.gz
-        tar xvzf ./logstash*.tar.gz
-
-        # 실행
-        ./logstash-7.12.1-linux-x86_64/bin/logstash
-        ```
-- 로그스태시 설정 변경
-    - ```bash
-        # ./logstash-7.12.1-linux-x86_64/config/default.conf
-        input {
-            beats {
-                port => "5044"
+            # 실행
+            ./logstash-7.12.1-linux-x86_64/bin/logstash
+            ```
+    - 로그스태시 설정 변경
+        - ```bash
+            # ./logstash-7.12.1-linux-x86_64/config/default.conf
+            input {
+                beats {
+                    port => "5044"
+                }
             }
-        }
 
-        filter { }
+            filter { }
 
-        output {
-            stdout {
-                codec => rubydebug
+            output {
+                stdout {
+                    codec => rubydebug
+                }
             }
-        }
-        ```
-- 재실행
-    - ```bash
-        ./logstash-7.12.1-linux-x86_64/bin/logstash
-        ```
+            ```
+    - 재실행
+        - ```bash
+            ./logstash-7.12.1-linux-x86_64/bin/logstash
+            ```
 2. 파일비트 재실행
-
-- 개요
-    - 로그스태시가 떠올랐으면 파일비트를 재실행하여 s3 정보를 로그스태시로 전송한다.
-    - 파일비트 설정을 변경하여 output을 logstash로 지정한다.
-    - 만약 전송 중 끊겼다면 ./filebeat-8.2.3-linux-x86_64/data/registry 디렉토리를  
-      지우고 재실행하면 처음부터 진행할 수 있다.
-- 파일비트 설정 변경
-    - ```bash
-        # ./filebeat-8.1.2-linux-x86_64/filebeat.yml
-        ...
-        output.logstash:
-            hosts: ["127.0.0.1:5044"]
-        ...
-        ```
-- 재실행
-    - ```bash
-        # 새로운 쉘 창을 띄우고 실행
-        ./filebeat-8.2.3-linux-x86_64/filebeat -e -c filebeat.yml
-        ```
+    - 개요
+        - 로그스태시가 떠올랐으면 파일비트를 재실행하여 s3 정보를 로그스태시로 전송한다.
+        - 파일비트 설정을 변경하여 output을 logstash로 지정한다.
+        - 만약 전송 중 끊겼다면 ./filebeat-8.2.3-linux-x86_64/data/registry 디렉토리를  
+        지우고 재실행하면 처음부터 진행할 수 있다.
+    - 파일비트 설정 변경
+        - ```bash
+            # ./filebeat-8.1.2-linux-x86_64/filebeat.yml
+            ...
+            output.logstash:
+                hosts: ["127.0.0.1:5044"]
+            ...
+            ```
+    - 재실행
+        - ```bash
+            # 새로운 쉘 창을 띄우고 실행
+            ./filebeat-8.2.3-linux-x86_64/filebeat -e -c filebeat.yml
+            ```
 3. 확인
-
-- 로그스태시 화면
-    - 로그스태시 쉘 창에 로그가 막 올라오고 있다면 정상 작동하는 것이다.
+    - 로그스태시 화면
+        - 로그스태시 쉘 창에 로그가 막 올라오고 있다면 정상 작동하는 것이다.
 
 ## 참고
 - [AWS CLI로 인증 정보 (Access Key ID, Secret Access Key) 관리하기](https://www.daleseo.com/aws-cli-configure/){:target="_blank"}
