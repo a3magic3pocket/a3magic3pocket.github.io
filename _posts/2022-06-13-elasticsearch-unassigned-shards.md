@@ -56,6 +56,7 @@ tags: [elk, elasticsearch, unassigned-shards]    # TAG names should always be lo
                 # replica 수 변경되었는지 확인
                 curl "localhost:9200/_cluster/stats?pretty" | grep "replication"
                 ```
+                
 ## 조치 후 샤드 재할당
 - ```bash
     # 자동 할당 설정 활성화
