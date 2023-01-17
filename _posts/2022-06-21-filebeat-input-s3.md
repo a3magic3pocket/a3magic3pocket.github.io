@@ -109,6 +109,7 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
 
 # filebeat 정상 동작 확인
 1. 로그스태시 설치 및 실행
+
 - 개요
     - 로그스태시를 설치하고 input은 filebeat으로 output은 표준출력으로 지정한다.
 - 로그스태시 설치
@@ -146,6 +147,7 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
         ./logstash-7.12.1-linux-x86_64/bin/logstash
         ```
 2. 파일비트 재실행
+
 - 개요
     - 로그스태시가 떠올랐으면 파일비트를 재실행하여 s3 정보를 로그스태시로 전송한다.
     - 파일비트 설정을 변경하여 output을 logstash로 지정한다.
@@ -165,6 +167,7 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
         ./filebeat-8.2.3-linux-x86_64/filebeat -e -c filebeat.yml
         ```
 3. 확인
+
 - 로그스태시 화면
     - 로그스태시 쉘 창에 로그가 막 올라오고 있다면 정상 작동하는 것이다.
 
