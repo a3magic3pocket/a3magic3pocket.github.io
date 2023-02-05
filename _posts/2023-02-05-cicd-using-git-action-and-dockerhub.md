@@ -114,11 +114,11 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                     - 미리 생성된 액션 환경을 이용하는 부분이다.
                     - 예를들어 node 환경을 구축하려고 한다면  
                         ```yml
-                        steps:
-                        - uses: actions/setup-node@v3
-                            with:
-                            node-version: 16
-                        ```  
+                            steps:
+                            - uses: actions/setup-node@v3
+                                with:
+                                node-version: 16
+                        ```    
                         을 입력하면 된다.
                     - 미리 생성된 액션은 마켓플레이스에서 검색하여 찾을 수 있다.  
                       [마켓플레이스](https://github.com/marketplace?query=setup+node+){:target="_blank"}  
