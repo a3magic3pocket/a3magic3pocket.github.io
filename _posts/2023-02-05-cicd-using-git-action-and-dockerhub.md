@@ -1,6 +1,6 @@
 ---
 title: git action과 dockerhub을 이용한 CI/CD 파이프라인 구축 블로그
-date: 2022-02-05 12:49:00 +0900
+date: 2023-02-05 12:49:00 +0900
 categories: [cicd]
 tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 ---
