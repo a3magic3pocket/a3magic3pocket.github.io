@@ -98,11 +98,11 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                         runs-on: <os 이미지명>
                         
                         steps:
-                        - name: <스텝명>
-                          uses: <액션명>
+                          - name: <스텝명>
+                            uses: <액션명>
 
-                        - name: <스텝명>
-                          run: <실행할 명령어>           
+                          - name: <스텝명>
+                            run: <실행할 명령어>           
                     ```
                 - on
                     - [워크플로를 트리거하는 이벤트 목록](https://docs.github.com/ko/actions/using-workflows/events-that-trigger-workflows){:target="_blank"}
@@ -148,31 +148,31 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 
                         # 각 단계 설정
                         steps:
-                        # github에 있는 소스코드를 CI 머신으로 복사하기
-                        - name: Checkout
-                          uses: actions/checkout@v2
+                          # github에 있는 소스코드를 CI 머신으로 복사하기
+                          - name: Checkout
+                            uses: actions/checkout@v2
 
-                        # node 환경 구축
-                        - name: Setup Node
-                          uses: actions/setup-node@v2
-                          with:
-                            node-version: "16.13.0"
+                          # node 환경 구축
+                          - name: Setup Node
+                            uses: actions/setup-node@v2
+                            with:
+                              node-version: "16.13.0"
 
-                        # node 의존성 패키지 설치
-                        - name: Install dependencies
-                          run: npm install
+                          # node 의존성 패키지 설치
+                          - name: Install dependencies
+                            run: npm install
 
-                        # 테스트 시작
-                        - name: Test
-                          run: npm run test
+                          # 테스트 시작
+                          - name: Test
+                            run: npm run test
 
-                        # 빌드 시작
-                        - name: Build Test
-                          run: npm run build
+                          # 빌드 시작
+                          - name: Build Test
+                            run: npm run build
 
-                        # Dockerhub에 같은 태그를 가진 이미지가 존재하는지 확인
-                        - name: Image Tag Test
-                          run: chmod 775 ./extract-image-tag_linux_amd64 && ./extract-image-tag_linux_amd64 -f simple-web.yml -tu https://hub.docker.com/v2/namespaces/a3magic3pocket/repositories/simple-web/tags    
+                          # Dockerhub에 같은 태그를 가진 이미지가 존재하는지 확인
+                          - name: Image Tag Test
+                            run: chmod 775 ./extract-image-tag_linux_amd64 && ./extract-image-tag_linux_amd64 -f simple-web.yml -tu https://hub.docker.com/v2/namespaces/a3magic3pocket/repositories/simple-web/tags    
                     ```
         - CD용 git actions스크립트 작성
             - 이름
@@ -250,8 +250,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
               
                     # 워크플로 이벤트가 pull_request이고 워크플로가 성공했다면 아래 스텝 진행
                     if: >
-                      ${{ github.event.workflow_run.event == 'pull_request' &&
-                      github.event.workflow_run.conclusion == 'success' }}
+                      $\{\{ github.event.workflow_run.event == 'pull_request' &&
+                      github.event.workflow_run.conclusion == 'success' \}\}
               
                     # 스탭들
                     steps:
@@ -266,8 +266,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                       - name: Log in to Docker Hub
                         uses: docker/login-action@v1
                         with:
-                          username: ${{ secrets.DOCKERHUB_USERNAME }}
-                          password: ${{ secrets.DOCKERHUB_AUTH_TOKEN }}
+                          username: $\{\{ secrets.DOCKERHUB_USERNAME \}\}
+                          password: $\{\{ secrets.DOCKERHUB_AUTH_TOKEN \}\}
               
                       # 태그 추출
                       - run: chmod 775 ./extract-image-tag_linux_amd64 
@@ -279,7 +279,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                         with:
                           context: .
                           push: true
-                          tags: a3magic3pocket/simple-web:${{ env.TAG }}
+                          tags: a3magic3pocket/simple-web:$\{\{ env.TAG \}\}
                  ```
         - 서비스 서버에 Webhook 설치
             - 가정
