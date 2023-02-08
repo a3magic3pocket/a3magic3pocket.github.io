@@ -559,88 +559,88 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
       ```bash
         0 0 1 */2 * /usr/bin/env bash /home/ubuntu/simple-docker-swarm/set_ssl.sh renew && docker service update a3_nginx
       ```
-- 실험시작
-  - swarm mode 시작  
-    ```bash
-      docker swarm init
-    ```
-  - github 소스 내려 받기  
-    ```bash
-      # git clone
-      git clone https://github.com/a3magic3pocket/simple-docker-swarm.git
+## 실험시작
+- swarm mode 시작  
+  ```bash
+    docker swarm init
+  ```
+- github 소스 내려 받기  
+  ```bash
+    # git clone
+    git clone https://github.com/a3magic3pocket/simple-docker-swarm.git
 
-      # clone 받은 디렉토리로 이동
-      cd ./simple-docker-swarm
-    ```
-  - 의존성 패키지 설치  
-    ```bash
-      sudo apt-get update sudo apt-get upgrade 
+    # clone 받은 디렉토리로 이동
+    cd ./simple-docker-swarm
+  ```
+- 의존성 패키지 설치  
+  ```bash
+    sudo apt-get update sudo apt-get upgrade 
 
-      # 도커 설치 
-      curl -fsSL https://get.docker.com -o get-docker.sh DRY_RUN=1 sudo sh ./get-docker.sh 
+    # 도커 설치 
+    curl -fsSL https://get.docker.com -o get-docker.sh DRY_RUN=1 sudo sh ./get-docker.sh 
 
-      # 웹훅 서버 설치 
-      sudo apt-get install webhook
-    ```
-  - Webhook 서버 실행  
-    ```bash
-      bash run_webhook.sh
-    ```
-  - docker-compose를 바탕으로 stack 생성  
-    ```bash
-      bash deploy.sh stack
-    ```
-  - 잘 생성되었나 확인  
-    ```bash
-      # stack 생성 확인
-      docker stack ls
+    # 웹훅 서버 설치 
+    sudo apt-get install webhook
+  ```
+- Webhook 서버 실행  
+  ```bash
+    bash run_webhook.sh
+  ```
+- docker-compose를 바탕으로 stack 생성  
+  ```bash
+    bash deploy.sh stack
+  ```
+- 잘 생성되었나 확인  
+  ```bash
+    # stack 생성 확인
+    docker stack ls
 
-      # service 생성 확인
-      # 이때 서비스의 REPLICAS가 0/1 이면 아직 생성되고 있다는 뜻
-      docker service ls
+    # service 생성 확인
+    # 이때 서비스의 REPLICAS가 0/1 이면 아직 생성되고 있다는 뜻
+    docker service ls
 
-      # watch 명령어로 모든 서비스가 1/1이 될때까지 대기 후 확인
-      watch docker service ls
-    ```
+    # watch 명령어로 모든 서비스가 1/1이 될때까지 대기 후 확인
+    watch docker service ls
+  ```
 - 다중 노드 사용 시 유의사항
-  - 설명
-      - 다중 노드로 애플리케이션을 배포 및 운영하고 계신  
-        동료 프로그래머에게 몇 가지 유의사항을 들어 기록한다.
-  - replicas 수
-      - 다중 노드 사용 시  
-        manager 노드가 할당 가능한 노드에 replicas를 임의로 분배한다.
-      - max_replicas_per_node를 설정해주면  
-        한 노드 당 가질 수 있는 최대 replicas를 설정하여 골고루 분배할 수 있다.
-      - 만일 (할당 가능한 노드 * max_replicas_per_node 수 < 서비스 내의   
-        모든 replicas 수) 이면 에러가 나게 되니 주의
-      - 명령어  
-        ```yml
-          some_service:
-            deploy:
-              mode: replicated
-              replicas: 6
-              placement:
-                max_replicas_per_node: 1
-        ```
-  - 노드 status 세팅
-      - reachable 상태로 두면  
-        만약 manager 노드가 죽었을 경우  
-        reachable 노드가 대신 manager가 된다.  
-      - worker 노드는 manager 노드가 될 수 없다.
-      - 명령어  
-        ```bash
-          # 노드 상태 보기
-          # - 여기서 'MANAGER STATUS'를 참고하면 된다.
-          docker node ls
+- 설명
+    - 다중 노드로 애플리케이션을 배포 및 운영하고 계신  
+      동료 프로그래머에게 몇 가지 유의사항을 들어 기록한다.
+- replicas 수
+    - 다중 노드 사용 시  
+      manager 노드가 할당 가능한 노드에 replicas를 임의로 분배한다.
+    - max_replicas_per_node를 설정해주면  
+      한 노드 당 가질 수 있는 최대 replicas를 설정하여 골고루 분배할 수 있다.
+    - 만일 (할당 가능한 노드 * max_replicas_per_node 수 < 서비스 내의   
+      모든 replicas 수) 이면 에러가 나게 되니 주의
+    - 명령어  
+      ```yml
+        some_service:
+          deploy:
+            mode: replicated
+            replicas: 6
+            placement:
+              max_replicas_per_node: 1
+      ```
+- 노드 status 세팅
+    - reachable 상태로 두면  
+      만약 manager 노드가 죽었을 경우  
+      reachable 노드가 대신 manager가 된다.  
+    - worker 노드는 manager 노드가 될 수 없다.
+    - 명령어  
+      ```bash
+        # 노드 상태 보기
+        # - 여기서 'MANAGER STATUS'를 참고하면 된다.
+        docker node ls
 
-          # node를 worker node로 만들기
-          docker node demote [node id]
+        # node를 worker node로 만들기
+        docker node demote [node id]
 
-          # node를 reachable node로 승격시키기
-          docker node promote [node id]
-        ```
-- 참고
-  - [Docker Swarm의 주요 용어, 활성화 방법 및 노드(Node) 관리법 살펴보기](https://seongjin.me/docker-swarm-introduction-nodes/){:target="_blank"}
-  -  [컨테이너 오케스트레이션이란?](https://www.redhat.com/ko/topics/containers/what-is-container-orchestration){:target="_blank"}
-  - [서비스 작동 방식](https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/){:target="_blank"}
-  - [yml 파일 작성법](https://docs.docker.com/compose/compose-file/compose-file-v3/){:target="_blank"}
+        # node를 reachable node로 승격시키기
+        docker node promote [node id]
+      ```
+## 참고
+- [Docker Swarm의 주요 용어, 활성화 방법 및 노드(Node) 관리법 살펴보기](https://seongjin.me/docker-swarm-introduction-nodes/){:target="_blank"}
+-  [컨테이너 오케스트레이션이란?](https://www.redhat.com/ko/topics/containers/what-is-container-orchestration){:target="_blank"}
+- [서비스 작동 방식](https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/){:target="_blank"}
+- [yml 파일 작성법](https://docs.docker.com/compose/compose-file/compose-file-v3/){:target="_blank"}
