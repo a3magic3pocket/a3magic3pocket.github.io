@@ -1,5 +1,5 @@
 ---
-title: git action과 dockerhub을 이용한 CI/CD 파이프라인 구축 블로그
+title: git action과 dockerhub을 이용한 CI/CD 파이프라인 구축
 date: 2023-02-05 12:49:00 +0900
 categories: [cicd]
 tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
@@ -94,15 +94,15 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 
                     on: [<이벤트>]
                     jobs:
-                    <작업명>:
+                      <작업명>:
                         runs-on: <os 이미지명>
                         
                         steps:
                         - name: <스텝명>
-                            uses: <액션명>
+                          uses: <액션명>
 
                         - name: <스텝명>
-                            run: <실행할 명령어>           
+                          run: <실행할 명령어>           
                     ```
                 - on
                     - [워크플로를 트리거하는 이벤트 목록](https://docs.github.com/ko/actions/using-workflows/events-that-trigger-workflows){:target="_blank"}
@@ -116,7 +116,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                         ```yml
                             steps:
                             - uses: actions/setup-node@v3
-                                with:
+                              with:
                                 node-version: 16
                         ```    
                         을 입력하면 된다.
@@ -127,7 +127,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                     - 쉘로 실행하고자하는 명령어를 입력한다.
         - CI 용 git actions 스크립트 작성
             - 이름
-                - [github-actions.yml](https://github.com/a3magic3pocket/simple-web-example/blob/main/.github/workflows/github-actions.yml)
+                - [github-actions.yml](https://github.com/a3magic3pocket/simple-web-example/blob/main/.github/workflows/github-actions.yml){:target="_blank"}
             - 설명
                 - 개발자가 local 브랜치에서 remote repository 브랜치로 커밋을 푸시한 경우, 새로 업데이트된 소스소드로 빌드한 후 테스트를 진행한다.
             - 본문
@@ -141,8 +141,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 
                     # 작업
                     jobs:
-                    # 작업ID
-                    test:
+                      # 작업ID
+                      test:
                         # ubuntu 최신 버전을 CI 머신으로 활용
                         runs-on: ubuntu-latest
 
@@ -150,29 +150,29 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                         steps:
                         # github에 있는 소스코드를 CI 머신으로 복사하기
                         - name: Checkout
-                            uses: actions/checkout@v2
+                          uses: actions/checkout@v2
 
                         # node 환경 구축
                         - name: Setup Node
-                            uses: actions/setup-node@v2
-                            with:
+                          uses: actions/setup-node@v2
+                          with:
                             node-version: "16.13.0"
 
                         # node 의존성 패키지 설치
                         - name: Install dependencies
-                            run: npm install
+                          run: npm install
 
                         # 테스트 시작
                         - name: Test
-                            run: npm run test
+                          run: npm run test
 
                         # 빌드 시작
                         - name: Build Test
-                            run: npm run build
+                          run: npm run build
 
                         # Dockerhub에 같은 태그를 가진 이미지가 존재하는지 확인
                         - name: Image Tag Test
-                            run: chmod 775 ./extract-image-tag_linux_amd64 && ./extract-image-tag_linux_amd64 -f simple-web.yml -tu https://hub.docker.com/v2/namespaces/a3magic3pocket/repositories/simple-web/tags    
+                          run: chmod 775 ./extract-image-tag_linux_amd64 && ./extract-image-tag_linux_amd64 -f simple-web.yml -tu https://hub.docker.com/v2/namespaces/a3magic3pocket/repositories/simple-web/tags    
                     ```
         - CD용 git actions스크립트 작성
             - 이름
@@ -202,7 +202,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                 - Save Changes 클릭하여 저장
             - Dockerhub repository 생성
                 - Dockerhub에도 미리 image를 받을 repository를 만들어두어야 한다.
-                - ex) [a3magic3pocket/simple-web - Docker Image | Docker Hub](https://hub.docker.com/r/a3magic3pocket/simple-web){:target="_blank"}
+                - ex) [a3magic3pocket/simple-web dockerhub](https://hub.docker.com/r/a3magic3pocket/simple-web){:target="_blank"}
             - Dockerhub auth token 발급
                 - [Create an access token](https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token){:target="_blank"}
                 - github에서 Dockerhub 인증권한을 얻을 수 있도록  
@@ -221,65 +221,65 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                     <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.png" width="100%"></a> 
             - 본문
               ```yml
-              # 워크플로 이름
-              name: Build docker image
+                # 워크플로 이름
+                name: Build docker image
               
               
-              # 트리거
-              on:
-                # "simple web example CI" 워크플로가 main 브랜치에서 정상적으로 처리되었다면
-                workflow_run:
-                  workflows: ["simple web example CI"]
-                  branches: [main]
-                  types: 
-                    - completed
+                # 트리거
+                on:
+                  # "simple web example CI" 워크플로가 main 브랜치에서 정상적으로 처리되었다면
+                  workflow_run:
+                    workflows: ["simple web example CI"]
+                    branches: [main]
+                    types: 
+                      - completed
               
               
-              # 작업
-              jobs:
-                # 작업ID
-                push_to_registry:
-                  # 환경변수(docker access token을 불러오기 위함)
-                  environment: dockerhub
+                # 작업
+                jobs:
+                  # 작업ID
+                  push_to_registry:
+                    # 환경변수(docker access token을 불러오기 위함)
+                    environment: dockerhub
               
-                  # 작업명
-                  name: Push Docker image to Docker Hub
+                    # 작업명
+                    name: Push Docker image to Docker Hub
               
-                  # 머신 OS 이미지 선택
-                  runs-on: ubuntu-latest
+                    # 머신 OS 이미지 선택
+                    runs-on: ubuntu-latest
               
-                  # 워크플로 이벤트가 pull_request이고 워크플로가 성공했다면 아래 스텝 진행
-                  if: >
-                    ${{ github.event.workflow_run.event == 'pull_request' &&
-                    github.event.workflow_run.conclusion == 'success' }}
+                    # 워크플로 이벤트가 pull_request이고 워크플로가 성공했다면 아래 스텝 진행
+                    if: >
+                      ${{ github.event.workflow_run.event == 'pull_request' &&
+                      github.event.workflow_run.conclusion == 'success' }}
               
-                  # 스탭들
-                  steps:
-                    # github에 있는 소스코드를 CI머신으로 복사
-                    - name: Check out the repo
-                      uses: actions/checkout@v2
-                    
-                    # dockerfile 빌드
-                    - uses: docker/setup-buildx-action@v1
+                    # 스탭들
+                    steps:
+                      # github에 있는 소스코드를 CI머신으로 복사
+                      - name: Check out the repo
+                        uses: actions/checkout@v2
+                      
+                      # dockerfile 빌드
+                      - uses: docker/setup-buildx-action@v1
               
-                    # 도커 로그인 
-                    - name: Log in to Docker Hub
-                      uses: docker/login-action@v1
-                      with:
-                        username: ${{ secrets.DOCKERHUB_USERNAME }}
-                        password: ${{ secrets.DOCKERHUB_AUTH_TOKEN }}
+                      # 도커 로그인 
+                      - name: Log in to Docker Hub
+                        uses: docker/login-action@v1
+                        with:
+                          username: ${{ secrets.DOCKERHUB_USERNAME }}
+                          password: ${{ secrets.DOCKERHUB_AUTH_TOKEN }}
               
-                    # 태그 추출
-                    - run: chmod 775 ./extract-image-tag_linux_amd64 
-                    - run: echo "TAG=`./extract-image-tag_linux_amd64 -f simple-web.yml -tu https://hub.docker.com/v2/namespaces/a3magic3pocket/repositories/simple-web/tags`" >> $GITHUB_ENV
+                      # 태그 추출
+                      - run: chmod 775 ./extract-image-tag_linux_amd64 
+                      - run: echo "TAG=`./extract-image-tag_linux_amd64 -f simple-web.yml -tu https://hub.docker.com/v2/namespaces/a3magic3pocket/repositories/simple-web/tags`" >> $GITHUB_ENV
               
-                    # 추출한 태그를 이용하여 만든 도커이미지를 dockerhub으로 푸시
-                    - name: Build and push Docker image
-                      uses: docker/build-push-action@v2
-                      with:
-                        context: .
-                        push: true
-                        tags: a3magic3pocket/simple-web:${{ env.TAG }}
+                      # 추출한 태그를 이용하여 만든 도커이미지를 dockerhub으로 푸시
+                      - name: Build and push Docker image
+                        uses: docker/build-push-action@v2
+                        with:
+                          context: .
+                          push: true
+                          tags: a3magic3pocket/simple-web:${{ env.TAG }}
                  ```
         - 서비스 서버에 Webhook 설치
             - 가정
