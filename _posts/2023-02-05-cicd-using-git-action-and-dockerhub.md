@@ -4,7 +4,6 @@ date: 2023-02-05 12:49:00 +0900
 categories: [cicd]
 tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 ---
-## git action과 dockerhub을 이용한 CI/CD 파이프라인 구축 글 쓰기
 - CI/CD란
     - 상세한 정의
         - Red Hat 문서에 상세하게 잘 적혀있다.
@@ -310,14 +309,14 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                 - 안타깝게도 Dockerhub에서는 IP 형태의 URL를 webhook URL로   
                   입력할 수 없다.
                 - webhook URL을 domain 형태로 바꿔야 한다.
-                - 1. 직접 DNS에 webhook URL 등록하기
+                1. 직접 DNS에 webhook URL 등록하기
                     - Webhook의 디폴트 포트는  9000번이다.
                     - 클라우드 환경이라면 보안그룹에서 9000 포트를  
                       모든 아이피(0.0.0.0/0)에서 접근 할 수 있도록 개방한다.
                     - 서비스에서 사용하고 있는 도메인의 DNS에  
                       9000 포트로 접근할 수 있도록 A record를 추가한다.  
                       ex) webhook.my-domain.com -> 124.121.12.1:9000
-                - 2. 서비스 서버의 리버스 프록시에 webhook URL 등록하기  
+                2. 서비스 서버의 리버스 프록시에 webhook URL 등록하기  
                     - 만약 서비스 서버에서 nginx와 같은 웹서버를  
                       리버스 프록시로 사용 중이라면  
                       webhook URL을 프록시로 넘겨줄 수 있다.
