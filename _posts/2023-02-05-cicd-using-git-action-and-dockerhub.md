@@ -221,6 +221,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                     <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.png" width="100%"></a> 
             - 본문
               ```yml
+                {% raw %}
                 # 워크플로 이름
                 name: Build docker image
               
@@ -250,10 +251,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
               
                     # 워크플로 이벤트가 pull_request이고 워크플로가 성공했다면 아래 스텝 진행
                     if: >
-                      {% raw %}
                       ${{ github.event.workflow_run.event == 'pull_request' &&
                       github.event.workflow_run.conclusion == 'success' }}
-                      {% endraw %}
               
                     # 스탭들
                     steps:
@@ -268,10 +267,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                       - name: Log in to Docker Hub
                         uses: docker/login-action@v1
                         with:
-                          {% raw %}
                           username: ${{ secrets.DOCKERHUB_USERNAME }}
                           password: ${{ secrets.DOCKERHUB_AUTH_TOKEN }}
-                          {% endraw %}
               
                       # 태그 추출
                       - run: chmod 775 ./extract-image-tag_linux_amd64 
@@ -284,6 +281,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                           context: .
                           push: true
                           tags: a3magic3pocket/simple-web:${{ env.TAG }}
+                  {% endraw %}
                  ```
         - 서비스 서버에 Webhook 설치
             - 가정
