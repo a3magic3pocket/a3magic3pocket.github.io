@@ -17,7 +17,7 @@ tags: [prototype] # TAG names should always be lowercase
         - 메인에 접속한다
     - 회원가입 및 로그인
         - <a href="/assets/img/2023-02-08-introduce-simple-locker/01-signup.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/01-signup.png" width="100%"></a>
-        - <a href="/assets/img/2023-02-08-introduce-simple-locker/02-login.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/02-login.png" width="100%"></a>
+        - <a href="/assets/img/2023-02-08-introduce-simple-locker/02-login.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/02-login.png" width="30%"></a>
     - 회원가입 및 로그인을 한다.
         - 시작하기를 누른다.
             - <a href="/assets/img/2023-02-08-introduce-simple-locker/03-start.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/03-start.png" width="100%"></a>
