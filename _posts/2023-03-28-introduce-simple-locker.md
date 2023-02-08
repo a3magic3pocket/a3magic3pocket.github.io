@@ -65,13 +65,13 @@ tags: [prototype] # TAG names should always be lowercase
         - 개발에 사용한 도구
             - [appleboy/gin-jwt: JWT Middleware for Gin framework (github.com)](https://github.com/appleboy/gin-jwt){:target="_blank"}
         - 구조
-            1. 클라이언트에서 API 서버로 로그인 페이지를 요청한다.
+            - 클라이언트에서 API 서버로 로그인 페이지를 요청한다.
                 - ex) GET https://api.coinlocker.link/login?redirect-url=coinlocker.link/check
                 - 파라미터
                     - redirect-url
                         - 로그인 성공 시 리다이렉트 할 URL
-            2.  API 서버에서 로그인 페이지를 응답으로 리턴한다.
-            3. 클라이언트에서 로그인 페이지에 ID와 PASSWORD를 담아  
+            - API 서버에서 로그인 페이지를 응답으로 리턴한다.
+            - 클라이언트에서 로그인 페이지에 ID와 PASSWORD를 담아  
                 API 서버로 인증을 요청한다.
                 - 클라이언트에서 로그인 버튼을 누르면  
                     ```
@@ -82,7 +82,7 @@ tags: [prototype] # TAG names should always be lowercase
                   요청이 API로 전송된다.
                 - 관련 소스
                     -  [simple-api-example/login.js at main · a3magic3pocket/simple-api-example (github.com)](https://github.com/a3magic3pocket/simple-api-example/blob/main/public/js/login.js){:target="_blank"}
-            4. API 서버에서는 UserName과 Password를 가지고 인증을 시작한다.
+            - API 서버에서는 UserName과 Password를 가지고 인증을 시작한다.
                 - 인증(Authentication) 실패 또는 인가(Authorization) 실패 시  
                     적절한 에러코드와 에러메시지를 json에 담아 리턴한다.
                 - 로그인 성공 시 인자로 받은 redirect-url로 리다이렉트 한다.  
@@ -102,7 +102,7 @@ tags: [prototype] # TAG names should always be lowercase
                     - 만약 ssl 인증서가 만료되었다면 로그인을 기능을 사용할 수 없다.
                 - 관련 소스
                     - [simple-api-example/auth.go at main · a3magic3pocket/simple-api-example (github.com)](https://github.com/a3magic3pocket/simple-api-example/blob/main/middleware/auth.go){:target="_blank"}
-            5. redirect-url로 리다이렉트되면  
+            - redirect-url로 리다이렉트되면  
                 클라이언트에서는 로그인 성공과 관련된 정보를 로컬 스토리지에 저장한다.
                 - JWT가 HttpOnly 이기 때문에 클라이언트에서는   
                     javascript로 JWT 쿠키를 조회할 수 없다.
@@ -136,11 +136,11 @@ tags: [prototype] # TAG names should always be lowercase
                         이면 안 됨)
                     - [cookies.onChanged](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/onChanged){:target="_blank"}
                     - [Window: storage event](https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event){:target="_blank"}
-            - 6. 인증 만료 상태에서 클라이언트가 로그인이 필요한 페이지로 접속한 경우
+            - 인증 만료 상태에서 클라이언트가 로그인이 필요한 페이지로 접속한 경우
                 - 사용자가 로그인이 필요한 페이지로 접속하여 API를 요청할 경우  
                     API에서 인증실패 오류를 내뱉기 때문에  
                     로그인 페이지로 리다이렉트하게 된다.  
-            - 7. 클라이언트에서 로그아웃 버튼을 누른 경우  
+            - 클라이언트에서 로그아웃 버튼을 누른 경우  
                 - 클라이언트에서 API로 로그아웃을 요청한다.  
                 - 요청 결과가 성공하였다면 클라이언트에서   
                     front-login 쿠키와 username 쿠키를 삭제한다.
