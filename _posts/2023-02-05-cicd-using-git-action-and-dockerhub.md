@@ -250,7 +250,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
               
                     # 워크플로 이벤트가 pull_request이고 워크플로가 성공했다면 아래 스텝 진행
                     if: >
-                      \${{ github.event.workflow_run.event == 'pull_request' &&
+                      $\{{ github.event.workflow_run.event == 'pull_request' &&
                       github.event.workflow_run.conclusion == 'success' }}
               
                     # 스탭들
