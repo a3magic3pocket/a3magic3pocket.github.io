@@ -42,6 +42,9 @@ tags: [prototype] # TAG names should always be lowercase
         - 사당역으로 옮겨진 25번 로커를 클릭하고  
             삭제를 클릭한다.
             - <a href="/assets/img/2023-02-08-introduce-simple-locker/10-remove-box.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/10-remove-box.png" width="100%"></a>
+
+
+            
 ## 구조
 - 구성도
     - <a href="/assets/img/2023-02-08-introduce-simple-locker/11-structure.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/11-structure.png" width="100%"></a>
