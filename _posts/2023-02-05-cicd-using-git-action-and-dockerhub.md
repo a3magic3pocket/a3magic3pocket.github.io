@@ -250,8 +250,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
               
                     # 워크플로 이벤트가 pull_request이고 워크플로가 성공했다면 아래 스텝 진행
                     if: >
-                      $\{{ github.event.workflow_run.event == 'pull_request' &&
-                      github.event.workflow_run.conclusion == 'success' }}
+                      ${{ github.event.workflow_run.event == 'pull_request' &&
+                      github.event.workflow_run.conclusion == 'success' }<!---->}
               
                     # 스탭들
                     steps:
@@ -266,8 +266,8 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                       - name: Log in to Docker Hub
                         uses: docker/login-action@v1
                         with:
-                          username: ${{ secrets.DOCKERHUB_USERNAME }}
-                          password: ${{ secrets.DOCKERHUB_AUTH_TOKEN }}
+                          username: ${{ secrets.DOCKERHUB_USERNAME }<!---->}
+                          password: ${{ secrets.DOCKERHUB_AUTH_TOKEN }<!---->}
               
                       # 태그 추출
                       - run: chmod 775 ./extract-image-tag_linux_amd64 
