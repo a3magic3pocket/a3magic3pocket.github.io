@@ -240,14 +240,14 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
         - docker-compose.yml 파일에서 참조하는 환경변수이다.
         - manager 노드에서 환경변수를 설정하면  
           docker-compse.yml에서 해당 변수를 가져와 반영한다.
-          ```yml
+          ```bash
             export API_TAG=0.0.7
             export WEB_TAG=0.0.19
           ```
 - 기본적인 배포 방법
     - stack 배포
         - yml 파일에 기록된 모든 것을 자동으로 세팅해준다.
-          ```yml
+          ```bash
             # 환경변수 선언
             export API_TAG=0.0.7
             export WEB_TAG=0.0.19
@@ -263,7 +263,7 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
           ```
     - 서비스 이미지만 변경
         - 이미 배포된 서비스에서 이미지만 업데이트하는 것을 말한다.
-          ```yml
+          ```bash
             # service 목록 조회
             docker service ls
 
@@ -561,11 +561,11 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
       ```
 - 실험시작
   - swarm mode 시작  
-    ```
+    ```bash
       docker swarm init
     ```
   - github 소스 내려 받기  
-    ```
+    ```bash
       # git clone
       git clone https://github.com/a3magic3pocket/simple-docker-swarm.git
 
@@ -573,7 +573,7 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
       cd ./simple-docker-swarm
     ```
   - 의존성 패키지 설치  
-    ```
+    ```bash
       sudo apt-get update sudo apt-get upgrade 
 
       # 도커 설치 
@@ -583,15 +583,15 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
       sudo apt-get install webhook
     ```
   - Webhook 서버 실행  
-    ```
+    ```bash
       bash run_webhook.sh
     ```
   - docker-compose를 바탕으로 stack 생성  
-    ```
+    ```bash
       bash deploy.sh stack
     ```
   - 잘 생성되었나 확인  
-    ```
+    ```bash
       # stack 생성 확인
       docker stack ls
 
@@ -628,7 +628,7 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
         reachable 노드가 대신 manager가 된다.  
       - worker 노드는 manager 노드가 될 수 없다.
       - 명령어  
-        ```yml
+        ```bash
           # 노드 상태 보기
           # - 여기서 'MANAGER STATUS'를 참고하면 된다.
           docker node ls
