@@ -13,41 +13,41 @@ tags: [prototype] # TAG names should always be lowercase
 ## 이용방법 예시
 - 시작하기
     - 메인
-        - <a href="/assets/img/2023-02-08-introduce-simple-locker/00-main.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/00-main.png" width="100%"></a> 
+        - <a href="/assets/img/2023-02-08-introduce-simple-locker/00-main.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/00-main.jpg" width="100%"></a> 
         - 메인에 접속한다
     - 회원가입 및 로그인
-        - <a href="/assets/img/2023-02-08-introduce-simple-locker/01-signup.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/01-signup.png" width="100%"></a>
-        - <a href="/assets/img/2023-02-08-introduce-simple-locker/02-login.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/02-login.png" width="30%"></a>
+        - <a href="/assets/img/2023-02-08-introduce-simple-locker/01-signup.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/01-signup.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-02-08-introduce-simple-locker/02-login.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/02-login.jpg" width="30%"></a>
     - 회원가입 및 로그인을 한다.
         - 시작하기를 누른다.
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/03-start.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/03-start.png" width="100%"></a>
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/03-start.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/03-start.jpg" width="100%"></a>
     - 구역 추가
         - 새 구역에 로커 추가를 누른다.
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/04-create-new-sector.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/04-create-new-sector.png" width="100%"></a>
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/04-create-new-sector.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/04-create-new-sector.jpg" width="100%"></a>
         - 새 구역에 로커를 추가한다.  
             (강남역 구역 추가)
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/05-create-gangnam-sector.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/05-create-gangnam-sector.png" width="100%"></a> 
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/05-create-gangnam-sector.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/05-create-gangnam-sector.jpg" width="100%"></a> 
         - 새 구역에 또 다른 로커를 추가한다.  
             (사당역 구역 추가)
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/06-create-sadang-sector.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/06-create-sadang-sector.png" width="100%"></a> 
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/06-create-sadang-sector.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/06-create-sadang-sector.jpg" width="100%"></a> 
     - 로커 추가
         - 강남역 구역에서 '+' 버튼을 3번 클릭하여 3개의 로커를 추가한다.
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/07-create-boxes.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/07-create-boxes.png" width="100%"></a>
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/07-create-boxes.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/07-create-boxes.jpg" width="100%"></a>
     - 로커 구역 변경
         - 24, 25번 로커를 한 번씩 클릭한다.
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/08-select-boxes.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/08-select-boxes.png" width="100%"></a>
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/08-select-boxes.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/08-select-boxes.jpg" width="100%"></a>
         - 구역 변경을 클릭하고 사당역을 클릭한다.
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/09-change-sector.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/09-change-sector.png" width="100%"></a>
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/09-change-sector.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/09-change-sector.jpg" width="100%"></a>
     - 로커 삭제
         - 사당역으로 옮겨진 25번 로커를 클릭하고  
             삭제를 클릭한다.
-            - <a href="/assets/img/2023-02-08-introduce-simple-locker/10-remove-box.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/10-remove-box.png" width="100%"></a>
+            - <a href="/assets/img/2023-02-08-introduce-simple-locker/10-remove-box.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/10-remove-box.jpg" width="100%"></a>
 
 
             
 ## 구조
 - 구성도
-    - <a href="/assets/img/2023-02-08-introduce-simple-locker/11-structure.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/11-structure.png" width="100%"></a>
+    - <a href="/assets/img/2023-02-08-introduce-simple-locker/11-structure.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/11-structure.jpg" width="100%"></a>
 - API
     - [simple-api-example](https://github.com/a3magic3pocket/simple-api-example){:target="_blank"}
     - 개발에 사용한 도구
@@ -94,7 +94,7 @@ tags: [prototype] # TAG names should always be lowercase
         - 로그인 성공 시 인자로 받은 redirect-url로 리다이렉트 한다.  
             이때 클라이언트 브라우저에 인증정보가 담긴 JWT 쿠키가 저장된다.
         - JWT 쿠키는 아래와 같은 속성을 갖는다.  
-            <a href="/assets/img/2023-02-08-introduce-simple-locker/12-jwt.png" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/12-jwt.png" width="100%"></a> 
+            <a href="/assets/img/2023-02-08-introduce-simple-locker/12-jwt.jpg" target="_blank"><img src="/assets/img/2023-02-08-introduce-simple-locker/12-jwt.jpg" width="100%"></a> 
             - domain
                 - api.coinlocker.link
             - Path
