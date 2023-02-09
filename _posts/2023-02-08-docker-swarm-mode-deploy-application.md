@@ -559,6 +559,8 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
       ```bash
         0 0 1 */2 * /usr/bin/env bash /home/ubuntu/simple-docker-swarm/set_ssl.sh renew && docker service update a3_nginx
       ```
+
+
 ## 실험시작
 - swarm mode 시작  
   ```bash
@@ -639,6 +641,8 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
         # node를 reachable node로 승격시키기
         docker node promote [node id]
       ```
+
+
 ## 참고
 - [Docker Swarm의 주요 용어, 활성화 방법 및 노드(Node) 관리법 살펴보기](https://seongjin.me/docker-swarm-introduction-nodes/){:target="_blank"}
 -  [컨테이너 오케스트레이션이란?](https://www.redhat.com/ko/topics/containers/what-is-container-orchestration){:target="_blank"}
