@@ -222,7 +222,7 @@ main 브랜치로 merge 한다.
         - Add secret 클릭하고  
           DOCKERHUB_AUTH_TOKEN, DOCKERHUB_USERNAME을 각각 등록    
             <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.jpg" width="100%"></a> 
-    - 본문
+    - 본문  
       ```yml
         {% raw %}
         # 워크플로 이름
