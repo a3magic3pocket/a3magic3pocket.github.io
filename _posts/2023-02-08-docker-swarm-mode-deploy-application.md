@@ -43,7 +43,7 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
     - 노드 os는 ubuntu 22.04 이다.
     - 배포하고자 하는 웹 애플리케이션은 [simple-locker](https://www.coinlocker.link/){:target="_blank"}이다.
 - simple-locker 구조
-    - <a href="/assets/img/2023-02-08-docker-swarm-mode-deploy-application/00-simple-locker-structure.png" target="_blank"><img src="/assets/img/2023-02-08-docker-swarm-mode-deploy-application/00-simple-locker-structure.png" width="100%"></a> 
+    - <a href="/assets/img/2023-02-08-docker-swarm-mode-deploy-application/00-simple-locker-structure.jpg" target="_blank"><img src="/assets/img/2023-02-08-docker-swarm-mode-deploy-application/00-simple-locker-structure.jpg" width="100%"></a> 
     - simple-locker 간단한 설명 [블로그 링크]
 - docker swarm 설정 소스코드
     - [GitHub - a3magic3pocket/simple-docker-swarm: simple-docker-swarm](https://github.com/a3magic3pocket/simple-docker-swarm){:target="_blank"}

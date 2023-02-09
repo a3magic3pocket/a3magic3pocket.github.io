@@ -183,10 +183,10 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                 - github repository로 이동.   
                     ex) [simple-web-example](https://github.com/a3magic3pocket/simple-web-example){:target="_blank"}
                 - (상단 탭)Settings 클릭    
-                  <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.png" width="100%"></a> 
+                  <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.jpg" width="100%"></a> 
                 - (좌측 사이드메뉴) Branches 클릭
                 - Branch protection rules 오른쪽에 위치한 'Add rule' 클릭  
-                  <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/01-branches-and-rule.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/01-branches-and-rule.png" width="100%"></a> 
+                  <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/01-branches-and-rule.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/01-branches-and-rule.jpg" width="100%"></a> 
                 - Brach name pattern*에 'main' 입력
                 - Require status checks to pass before merging 클릭  
                   (main 브랜치에 머지 전 이상이 없는지 아래 항목을 체크하겠다는 뜻)
@@ -197,7 +197,7 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                     - Status checks에 사용할 git action의 job을 선택해야 함
                     - github-actions.yml에 있는 job ID "test"를 입력 후 선택
                 - Do not allow bypassing the above settings 클릭    
-                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/03-rule-detail.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/03-rule-detail.png" width="100%"></a> 
+                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/03-rule-detail.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/03-rule-detail.jpg" width="100%"></a> 
                 - Save Changes 클릭하여 저장
             - Dockerhub repository 생성
                 - Dockerhub에도 미리 image를 받을 repository를 만들어두어야 한다.
@@ -210,14 +210,14 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                 - github repository로 이동.  
                   ex) [simple-web-example](https://github.com/a3magic3pocket/simple-web-example){:target="_blank"}
                 - (상단 탭) Settings 클릭   
-                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.png" width="100%"></a> 
+                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/00-settings.jpg" width="100%"></a> 
                 - (좌측 사이드메뉴) Environments 클릭  
-                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/04-rule-environment.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/04-rule-environment.png" width="100%"></a> 
+                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/04-rule-environment.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/04-rule-environment.jpg" width="100%"></a> 
                 - "New environment"를 누르고 dockerhub을 등록
                 - 생성된 "dockerhub" environment를 클릭
                 - Add secret 클릭하고  
                   DOCKERHUB_AUTH_TOKEN, DOCKERHUB_USERNAME을 각각 등록    
-                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.png" width="100%"></a> 
+                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/05-add-secret.jpg" width="100%"></a> 
             - 본문
               ```yml
                 {% raw %}
@@ -332,11 +332,11 @@ tags: [git, git-action, dockerhub, cicd] # TAG names should always be lowercase
                 - Dockerhub에 로그인 후 CI / CD로 관리되는 repository로 이동한다.  
                     ex) [a3magic3pocket/simple-web - Docker Image | Docker Hub](https://hub.docker.com/r/a3magic3pocket/simple-web){:target="_blank"}
                 - 'Manage Repository'를 클릭한다.    
-                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/06-manage-repository.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/06-manage-repository.png" width="100%"></a> 
+                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/06-manage-repository.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/06-manage-repository.jpg" width="100%"></a> 
                 - 'Webhooks'를 클릭
                 - Webhook name을 적고(아무거나 적어도 된다)  
                     Webhook URL을 입력하고 Create를 누른다.  
-                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/07-webhooks.png" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/07-webhooks.png" width="100%"></a> 
+                    <a href="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/07-webhooks.jpg" target="_blank"><img src="/assets/img/2023-02-05-cicd-using-git-action-and-dockerhub/07-webhooks.jpg" width="100%"></a> 
     - 상업용으로 CI / CD 구축 시 고려사항
         - 보안을 고려하여 Docker registry 서버는 AWS ECR을 사용하거나  
             서버를 따로 만들어 private docker registry를 운영하는 것이 좋을 것 같다.
