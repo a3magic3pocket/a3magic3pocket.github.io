@@ -576,7 +576,8 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
   ```
 - 의존성 패키지 설치  
   ```bash
-    sudo apt-get update sudo apt-get upgrade 
+    sudo apt-get update 
+    sudo apt-get upgrade 
 
     # 도커 설치 
     curl -fsSL https://get.docker.com -o get-docker.sh DRY_RUN=1 sudo sh ./get-docker.sh 
