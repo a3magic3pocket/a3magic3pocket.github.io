@@ -606,25 +606,25 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
     watch docker service ls
   ```
 - 다중 노드 사용 시 유의사항
-- 설명
-    - 다중 노드로 애플리케이션을 배포 및 운영하고 계신  
-      동료 프로그래머에게 몇 가지 유의사항을 들어 기록한다.
-- replicas 수
-    - 다중 노드 사용 시  
-      manager 노드가 할당 가능한 노드에 replicas를 임의로 분배한다.
-    - max_replicas_per_node를 설정해주면  
-      한 노드 당 가질 수 있는 최대 replicas를 설정하여 골고루 분배할 수 있다.
-    - 만일 (할당 가능한 노드 * max_replicas_per_node 수 < 서비스 내의   
-      모든 replicas 수) 이면 에러가 나게 되니 주의
-    - 명령어  
-      ```yml
-        some_service:
-          deploy:
-            mode: replicated
-            replicas: 6
-            placement:
-              max_replicas_per_node: 1
-      ```
+  - 설명
+      - 다중 노드로 애플리케이션을 배포 및 운영하고 계신  
+        동료 프로그래머에게 몇 가지 유의사항을 들어 기록한다.
+  - replicas 수
+      - 다중 노드 사용 시  
+        manager 노드가 할당 가능한 노드에 replicas를 임의로 분배한다.
+      - max_replicas_per_node를 설정해주면  
+        한 노드 당 가질 수 있는 최대 replicas를 설정하여 골고루 분배할 수 있다.
+      - 만일 (할당 가능한 노드 * max_replicas_per_node 수 < 서비스 내의   
+        모든 replicas 수) 이면 에러가 나게 되니 주의
+      - 명령어  
+        ```yml
+          some_service:
+            deploy:
+              mode: replicated
+              replicas: 6
+              placement:
+                max_replicas_per_node: 1
+        ```
 - 노드 status 세팅
     - reachable 상태로 두면  
       만약 manager 노드가 죽었을 경우  
