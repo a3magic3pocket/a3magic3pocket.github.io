@@ -366,3 +366,4 @@ main 브랜치로 merge 한다.
 - [adnanh/webhook](https://github.com/adnanh/webhook){:target="_blank"}
 - [마켓플레이스](https://github.com/marketplace?query=setup+node+){:target="_blank"}
 - [Setup Node.js environment](https://github.com/marketplace/actions/setup-node-js-environment){:target="_blank"}
+- [풀 리퀘스트 머지 후 테스트 통과하면 도커 이미지 생성하도록 하는 법](https://blog.outsider.ne.kr/1541){:target="_blank"}

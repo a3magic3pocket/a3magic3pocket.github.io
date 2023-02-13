@@ -8,7 +8,7 @@ tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG nam
 - [쿠버네티스란 무엇인가?](https://kubernetes.io/ko/docs/concepts/overview/){:target="_blank"}
 - 컨테이너 오케스트레이션 툴이다.
 - 쿠버네티스는 [Docker swarm mode](https://a3magic3pocket.github.io/posts/docker-swarm-mode-deploy-application/){:target="_blank"}와 비슷하나  
-대규모 애플리케이션 보다 더 적합하다.
+대규모 애플리케이션에 보다 더 적합하다.
     - [Docker Swarm vs Kubernetes: how to choose a container orchestration tool](https://circleci.com/blog/docker-swarm-vs-kubernetes/){:target="_blank"}
 - minikube란 쿠버네티스에 익숙해질 수 있도록 제공하는 실험용 툴이다.
     - [hello-minikube](https://kubernetes.io/ko/docs/tutorials/hello-minikube/){:target="_blank"}
@@ -165,10 +165,10 @@ tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG nam
     metadata:
     name: webhook-svc
     subsets:
-    - addresses:
-        - ip: your-webhook-ip
-        ports:
-        - port: 9000
+        - addresses:
+            - ip: your-webhook-ip
+            ports:
+            - port: 9000
     ```
 
 
@@ -389,7 +389,7 @@ tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG nam
         ingress는 적절히 서비스에 해당 요청을 분배한다.
     - 여기서는 nginx ingress controller를 사용한다.  
         [Ingress Controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/){:target="_blank"}
-- ingress.yml  
+- ingress.yml    
     ```yml
     apiVersion: networking.k8s.io/v1
     kind: Ingress
@@ -403,12 +403,12 @@ tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG nam
         # cert-manager.io/issuer: "letsencrypt-staging"
     spec:
     tls:
-    - hosts:
-        - www.your-frontend-url.com
-        - your-frontend-url.com
-        - your-backend-url.com
-        - your-webhook-url.com
-        secretName: simple-tls
+        - hosts:
+            - www.your-frontend-url.com
+            - your-frontend-url.com
+            - your-backend-url.com
+            - your-webhook-url.com
+            secretName: simple-tls
     rules:
         - host: "your-backend-url.com"
         http:
@@ -587,7 +587,7 @@ tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG nam
         ```
 - webhook 설정
     - deploy.sh 스크트립트 외에는 [docker-swarm-mode](https://a3magic3pocket.github.io/posts/docker-swarm-mode-deploy-application/){:target="_blank"}와 동일하다.
-    - deploy.sh  
+    - deploy.sh   
         ```bash
         kubectl apply -f config.yml
         kubectl apply -f secret.yml
@@ -602,7 +602,7 @@ tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG nam
         kubectl apply -f simple-web.yml
         
         kubectl apply -f ingress.yml
-          ```
+        ```
 - 자주 쓰는 명령어
     - [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/){:target="_blank"}
     - 명령어  
