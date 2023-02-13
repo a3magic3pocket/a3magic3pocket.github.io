@@ -38,6 +38,9 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
 
 
 ## 실험 환경
+- 목표
+    - [simple-locker](https://coinlocker.link/)를 docker swarm mode를 사용하여 배포해보고  
+    CI / CD 파이프라인에 연동해본다.
 - 가정
     - 단일 노드에서 배포하는 것을 가정한다.
     - 노드 os는 ubuntu 22.04 이다.
@@ -649,3 +652,4 @@ tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names shoul
 -  [컨테이너 오케스트레이션이란?](https://www.redhat.com/ko/topics/containers/what-is-container-orchestration){:target="_blank"}
 - [서비스 작동 방식](https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/){:target="_blank"}
 - [yml 파일 작성법](https://docs.docker.com/compose/compose-file/compose-file-v3/){:target="_blank"}
+- [풀 리퀘스트 머지 후 테스트 통과하면 도커 이미지 생성하도록 하는 법](https://blog.outsider.ne.kr/1541)
