@@ -285,7 +285,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/05_1_manipulated_num.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/05_1_manipulated_num.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/05_1_manipulated_num.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/05_1_manipulated_num.jpg" width="30%"></a>
     - 결과
         - TextRecognitionDataGenerator/trdg/outputs에 저장됨
 - CRNN으로 학습
