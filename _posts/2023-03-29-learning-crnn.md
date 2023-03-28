@@ -45,25 +45,25 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - 몇몇 폰트를 추가하였다.
 - 환경 구축  
     ```bash
-        # anaconda prompt를 실행하고 아래 명령 입력
-        
-        # 가상환경 설치
-        conda create -n trdg python=3.10
-        
-        # 가상환경 활성화
-        conda activate trdg
-        
-        # git clone 
-        git clone https://github.com/a3magic3pocket/TextRecognitionDataGenerator.git
-        
-        # repository 위치로 이동
-        cd TextRecognitionDataGenerator
-        
-        # 의존성 패키지 설치
-        pip install -r requirements.txt
-        
-        # run.py 위치로 이동
-        cd trdg
+    # anaconda prompt를 실행하고 아래 명령 입력
+    
+    # 가상환경 설치
+    conda create -n trdg python=3.10
+    
+    # 가상환경 활성화
+    conda activate trdg
+    
+    # git clone 
+    git clone https://github.com/a3magic3pocket/TextRecognitionDataGenerator.git
+    
+    # repository 위치로 이동
+    cd TextRecognitionDataGenerator
+    
+    # 의존성 패키지 설치
+    pip install -r requirements.txt
+    
+    # run.py 위치로 이동
+    cd trdg
     ```
 - 데이터 생성
     - 설명
@@ -73,17 +73,17 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - run.py에 더 자세한 인자 설명이 있다.
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            ##############
-            python run.py -c 10000--output_dir outputs -rs -num -w 1 -fi -im L -t 4
+        ## -- 인자 설명 -- ##
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        ##############
+        python run.py -c 10000--output_dir outputs -rs -num -w 1 -fi -im L -t 4
         ```
     - 예시
         - outputs 디렉토리 하위에 아래 이미지 들이 생성된 것을 볼 수 있다.
@@ -109,23 +109,23 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - lr(learning rate)을 0.0001로 수정하였다.
 - 환경구축  
     ```bash
-        # anaconda prompt를 실행하고 아래 명령 입력
-        
-        # 가상환경 설치
-        # colab과 pytorch를 고려하여 3.9로 설치한다.
-        conda create -n crnn python=3.9
-        
-        # 가상환경 활성화
-        conda activate crnn
-        
-        # git clone 
-        git clone https://github.com/a3magic3pocket/crnn.git
-        
-        # repository 위치로 이동
-        cd crnn
-        
-        # 의존성 패키지 설치
-        pip install -r requirements.txt
+    # anaconda prompt를 실행하고 아래 명령 입력
+    
+    # 가상환경 설치
+    # colab과 pytorch를 고려하여 3.9로 설치한다.
+    conda create -n crnn python=3.9
+    
+    # 가상환경 활성화
+    conda activate crnn
+    
+    # git clone 
+    git clone https://github.com/a3magic3pocket/crnn.git
+    
+    # repository 위치로 이동
+    cd crnn
+    
+    # 의존성 패키지 설치
+    pip install -r requirements.txt
     ```
 - 학습 데이터 이동
     - 학습데이터가 담긴 TextRecognitionDataGenerator/trdg/outputs 디렉토리를   
@@ -137,7 +137,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - args['epochs']를 5로 조정한다.
 - 학습 시작  
     ```bash
-        python train.py
+    python train.py
     ```
 - 학습 결과
     - 0 epoch 정도에서는 train_loss만 조금씩 감소하며  
@@ -163,22 +163,22 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - [a3magic3pocket/autonomous-driving](https://github.com/a3magic3pocket/autonomous-driving.git)
 - 환경구축  
     ```bash
-        # anaconda prompt를 실행하고 아래 명령 입력
-        
-        # 가상환경 설치
-        conda create -n auto python=3.10
-        
-        # 가상환경 활성화
-        conda activate auto
-        
-        # git clone
-        git clone https://github.com/a3magic3pocket/autonomous-driving.git
-        
-        # repository 위치로 이동
-        cd autonomous-driving
-        
-        # 의존성 패키지 설치
-        pip install -r requirements.txt
+    # anaconda prompt를 실행하고 아래 명령 입력
+    
+    # 가상환경 설치
+    conda create -n auto python=3.10
+    
+    # 가상환경 활성화
+    conda activate auto
+    
+    # git clone
+    git clone https://github.com/a3magic3pocket/autonomous-driving.git
+    
+    # repository 위치로 이동
+    cd autonomous-driving
+    
+    # 의존성 패키지 설치
+    pip install -r requirements.txt
     ```
 - Ultimate Car Driving Online 설치
     - 크롬을 켠다
@@ -188,11 +188,11 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - 수집 실행
     - 명령  
         ```bash
-            # collect.py 위치로 이동
-            cd data_collection
-            
-            # 실행
-            python collect.py
+        # collect.py 위치로 이동
+        cd data_collection
+        
+        # 실행
+        python collect.py
         ```
     - 실행 명령을 내리면 car앱 창이 focus 잡힌다.
     - 대략적으로 매 초마다 car앱창이 스크린샷으로 찍혀  
@@ -216,11 +216,11 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - <a href="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" width="100%"></a>
     - 명령  
         ```bash
-            # refine.py 위치로 이동
-            cd data_collection
-            
-            # 실행
-            python refine.py
+        # refine.py 위치로 이동
+        cd data_collection
+        
+        # 실행
+        python refine.py
         ```
     - 라벨 지정
         - refined_img 디렉토리에 정제 결과가 저장된다.
@@ -246,14 +246,14 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - args["imgdir"] 값을 "test"로 바꾼다.
     - 명령  
         ```bash
-            # 가상환경 활성화
-            conda activate crnn
-            
-            # eval.py로 이동
-            cd crnn
-            
-            # 실행
-            python eval.py
+        # 가상환경 활성화
+        conda activate crnn
+        
+        # eval.py로 이동
+        cd crnn
+        
+        # 실행
+        python eval.py
         ```
     - 결과
         - <a href="/assets/img/2023-03-29-learning-crnn/04_0_raw_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/04_0_raw_eval.jpg" width="100%"></a>
@@ -268,21 +268,21 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            ##############
-            python run.py -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
+        ## -- 인자 설명 -- ##
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        ##############
+        python run.py -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/05_1_manipulated_num.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/05_1_manipulated_num.jpg" width="100%"></a>
@@ -312,12 +312,12 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             force_save를 True로 지정한다.)
     - 명령  
         ```bash
-            python train.py
+        python train.py
         ```
 - CRNN으로 테스트
     - 명령  
         ```bash
-            python eval.py
+        python eval.py
         ```
     - 결과
         - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" width="100%"></a>
@@ -342,21 +342,21 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         이름 바꿔 붙여넣기 한다.
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            python run.py -ft fonts/custom/venus-rising-rg.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        python run.py -ft fonts/custom/venus-rising-rg.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/07_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/07_venus.jpg" width="100%"></a>
@@ -398,21 +398,21 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            python run.py -ft fonts/custom/venus-rising-rg.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        python run.py -ft fonts/custom/venus-rising-rg.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" width="100%"></a>
@@ -440,21 +440,21 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" width="100%"></a>
@@ -469,21 +469,21 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" width="100%"></a>
@@ -498,22 +498,22 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            # -cs [글자 간격, 단위 픽셀]
-            python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -cs -2 -t 4
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        # -cs [글자 간격, 단위 픽셀]
+        python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -cs -2 -t 4
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" width="100%"></a>
@@ -532,24 +532,24 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            # -cs [글자 간격, 단위 픽셀]
-            python run.py -ft fonts/custom/my-font-regular.otf -c 5000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -k 15
-            
-            python run.py -ft fonts/custom/my-font-regular.otf -c 5000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -k 345
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        # -cs [글자 간격, 단위 픽셀]
+        python run.py -ft fonts/custom/my-font-regular.otf -c 5000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -k 15
+        
+        python run.py -ft fonts/custom/my-font-regular.otf -c 5000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -k 345
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" width="100%"></a>
@@ -568,22 +568,22 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
-            ## -- 인자 설명 -- ##
-            # -ft [생성할 이미지의 문자 폰트 경로]
-            # -c [생성할 이미지 수]
-            # --output_dir [생성된 이미지를 저장할 디렉토리 명]
-            # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
-            # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
-            # -w [단어 수, 여기서는 1로 고정]
-            # -fi [이미지 여백을 타이트하게 지정]
-            # -im [이미지 모드, L은 8-bit grayscale image를 의미]
-            # -t [처리 시 사용할 스레드 수]
-            # -rk [랜덤 기울기(skew)]
-            # -rbl [랜덤 흐림(blur)]
-            # -d [왜곡(distortion)], 3은 랜덤을 의미
-            # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
-            # -cs [글자 간격, 단위 픽셀]
-            python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -wd 100
+        ## -- 인자 설명 -- ##
+        # -ft [생성할 이미지의 문자 폰트 경로]
+        # -c [생성할 이미지 수]
+        # --output_dir [생성된 이미지를 저장할 디렉토리 명]
+        # -rs [랜덤 시퀀스, 문자열이 랜덤으로 표시되어 이미지가 생성됨]
+        # -num [랜덤으로 생성하는 문자열이 숫자로 제한]
+        # -w [단어 수, 여기서는 1로 고정]
+        # -fi [이미지 여백을 타이트하게 지정]
+        # -im [이미지 모드, L은 8-bit grayscale image를 의미]
+        # -t [처리 시 사용할 스레드 수]
+        # -rk [랜덤 기울기(skew)]
+        # -rbl [랜덤 흐림(blur)]
+        # -d [왜곡(distortion)], 3은 랜덤을 의미
+        # -do [왜곡방향, 2는 Vertical, Horizontal 모두를 의미]
+        # -cs [글자 간격, 단위 픽셀]
+        python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -wd 100
         ```
     - 예시
         - <a href="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" width="100%"></a>
