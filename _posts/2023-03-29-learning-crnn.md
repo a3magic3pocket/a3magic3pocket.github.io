@@ -5,12 +5,12 @@ categories: [crnn]
 tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 ---
 
-# 문제
+## 문제
 - [Ultimate Car Driving Online](https://chrome.google.com/webstore/detail/ultimate-car-driving-game/aomkpefnllinimbhddlfhelelngakbbn?hl=ko) 스크린샷에서  
 속도 부분만 캡쳐하여 숫자를 알아내고자 한다.
 - 작은 CRNN 모델을 학습시켜 해결하였다.
 
-# 전반적인 과정
+## 전반적인 과정
 - 여러 폰트로 숫자가 표시된 이미지를 생성하여  
     train dataset을 만든다.
 - CRNN을 학습시킨다.
@@ -22,7 +22,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     위 과정을 반복한다.
 
 
-# 실험환경
+## 실험환경
 - OS
     - Windows  
         (화면 캡쳐할 때 Windows API를 사용하므로    
@@ -31,7 +31,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - [Windows 64-bit installer](https://repo.anaconda.com/miniconda/Miniconda3-latest-Windows-x86_64.exe)
 
 
-# 문자 dataset 생성기
+## 문자 dataset 생성기
 - 설명
     - 여러 폰트와 옵션을 사용하여 문자가 포함된  
         여러 이미지를 생성한다.
@@ -91,7 +91,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_1.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_1.jpg" width="100%"></a>
 
 
-# CRNN
+## CRNN
 - 설명
     - [Building a custom OCR using pytorch](https://deepayan137.github.io/blog/markdown/2020/08/29/building-ocr.html) 글을 참고하여 CRNN 모델을 구축한다.
     - CRNN을 모델이 작아서 그런지 CPU를 사용해도 금방 학습되기에  
@@ -151,7 +151,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - val_ca=97~100
     - val_wa=0.9~1
 
-# test dataset 만들기
+## test dataset 만들기
 - 설명
     - [Ultimate Car Driving Online](https://chrome.google.com/webstore/detail/ultimate-car-driving-game/aomkpefnllinimbhddlfhelelngakbbn?hl=ko) 을 플레이하며  
         일정 시간마다 스크린샷을 찍는다.
@@ -235,7 +235,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
                 - 8589_1234.png
 
 
-# CRNN test 해보기
+## CRNN test 해보기
 - 설명
     - eval.py를 실행하여 정제한 실제 데이터 통한 테스트를 진행한다.
 - 진행
@@ -261,7 +261,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - Word Accuracy: 0.12
 
 
-# 개선1: 학습 데이터에서 문자열 조작
+## 개선1: 학습 데이터에서 문자열 조작
 - 개요
     - 학습 데이터에서 기울기(skew)와 흐림(blur), 왜곡(distortion) 값을   
         랜덤으로 조정하여 이미지를 생성한 후 다시 학습해본다.
@@ -325,7 +325,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - Word Accuracy: 0.53
 
 
-# 개선2: 특정 폰트를 지정해서 학습 데이터 생성
+## 개선2: 특정 폰트를 지정해서 학습 데이터 생성
 - 개요
     - 학습 데이터의 문자열에 여러 조작을 가하는 것만으로  
         상당히 정확도가 상승하였다.
@@ -390,7 +390,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - Word Accuracy: 0.66
 
 
-# 개선3: venus 문자에 조작(skew, blur, distortion)을 가해서 학습 데이터 생성
+## 개선3: venus 문자에 조작(skew, blur, distortion)을 가해서 학습 데이터 생성
 - 개요
     - venus 문자에 조작을 가해 학습 데이터를 생성해본다.
     - 전반적은 과정은 개선1, 개선2와 동일하므로  
@@ -423,7 +423,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - Word Accuracy: 0.66
 
 
-# 개선4: 원본 숫자 이미지로 폰트를 생성하여 학습 데이터 생성
+## 개선4: 원본 숫자 이미지로 폰트를 생성하여 학습 데이터 생성
 - 개요
     - venus 폰트와 원본 숫자 이미지는 묘하게 다른 부분이 있다.
     - 아예 원본 숫자 이미지로 폰트를 만들어서 학습시키면  
@@ -465,7 +465,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - Word Accuracy: 0.72
 
 
-# 개선5: myfont로 문자에 조작(skew, blur, distortion)을 가해서 학습 데이터 생성
+## 개선5: myfont로 문자에 조작(skew, blur, distortion)을 가해서 학습 데이터 생성
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
@@ -494,7 +494,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - Word Accuracy: 0.72
 
 
-# 개선6: myfont의 글자(chracter) 간 간격을 좁혀서 학습 데이터 생성
+## 개선6: myfont의 글자(chracter) 간 간격을 좁혀서 학습 데이터 생성
 - TextRecognitionDataGenerator으로 학습 데이터 생성
     - 명령  
         ```bash
@@ -524,7 +524,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - Word Accuracy: 0.53
 
 
-# 개선7: myfont의 기울기를 지정하여 학습 데이터 생성
+## 개선7: myfont의 기울기를 지정하여 학습 데이터 생성
 - 개요
     - 글자 간 간격을 좁혔더니 정확도가 더 낮아졌다.
     - 글자 간 간격보다 기울기를 조정하는 것이 더 효과적일 것 같아  
@@ -560,7 +560,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - Word Accuracy: 0.34
 
 
-# 개선8: myfont의 가로 측 여백을 넓게 하여 학습 데이터 생성
+## 개선8: myfont의 가로 측 여백을 넓게 하여 학습 데이터 생성
 - 개요
     - 기울기를 조정했더니 정확도가 더 낮아졌다.
     - test dataset의 가로 측 여백이 많기에  
@@ -593,7 +593,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - Character Accuracy: 100.0
             - Word Accuracy: 1.00
 
-# 번외: train.py의 transforms에 Padding과 skewing 추가하기
+## 번외: train.py의 transforms에 Padding과 skewing 추가하기
 - 개요
     - 간단히 가로 축 여백 추가(Padding)과 기울기(skewing)만   
         추가해도 학습이 잘 되는지 궁금해졌다.
@@ -611,7 +611,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - 역시 이 정도의 data_augmentation으로는  
             부족한가보다
 
-# 느낀점
+## 느낀점
 - 작은 부분부터 차근차근 해결하는 딥러닝에서 학습시킬 때  
     접근 방법이 좋은 것 같다.
 - [meijieru/crnn.pytorch](https://github.com/meijieru/crnn.pytorch)의 README.md 하단 문구를 보면  
@@ -628,7 +628,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     잘 추출했기 때문이라고 생각한다.  
 
 
-# CRNN 학습 유의사항
+## CRNN 학습 유의사항
 - lr(learning rate)  
     - lr을 너무 키우면 loss가 점점 커서 발산하여  
         모델 학습에 실패한다.
@@ -648,7 +648,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - [Best practices to solve NaN CTC loss - PyTorch Forums](https://discuss.pytorch.org/t/best-practices-to-solve-nan-ctc-loss/151913/1)  참고
 
 
-# 학습에 실패한 소스
+## 학습에 실패한 소스
 - repository
     - [a3magic3pocket/crnn.pytorch](https://github.com/a3magic3pocket/crnn.pytorch)
 - 원본 repository
@@ -679,7 +679,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         loss만 줄고 실제 예측값은 대부분 공란이다.
 
 
-# 참고
+## 참고
 - [Building a custom OCR using pytorch](https://deepayan137.github.io/blog/markdown/2020/08/29/building-ocr.html)
 - [Deepayan137/Adapting-OCR](https://github.com/Deepayan137/Adapting-OCR)
 - [Belval/TextRecognitionDataGenerator](https://github.com/Belval/TextRecognitionDataGenerator)
