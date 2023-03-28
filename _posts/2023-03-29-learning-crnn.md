@@ -88,7 +88,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - 예시
         - outputs 디렉토리 하위에 아래 이미지 들이 생성된 것을 볼 수 있다.
         - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" width="100%"></a>
-        - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_1.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_1.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/01_normal_data_1.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/01_normal_data_1.jpg" width="100%"></a>
 
 
 ## CRNN
