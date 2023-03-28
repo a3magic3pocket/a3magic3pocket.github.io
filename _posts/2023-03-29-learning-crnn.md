@@ -211,9 +211,9 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             수정한다.
     - 예시
         - 원본 속도 이미지
-            - <a href="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.png" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.png" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.jpg" width="100%"></a>
         - 정제 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.png" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.png" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" width="100%"></a>
     - 명령  
         ```bash
             # refine.py 위치로 이동
@@ -256,7 +256,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             python eval.py
         ```
     - 결과
-        - <a href="/assets/img/2023-03-29-learning-crnn/04_0_raw_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/04_0_raw_eval.jpeg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/04_0_raw_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/04_0_raw_eval.jpg" width="100%"></a>
         - Character Accuracy: 43.23
         - Word Accuracy: 0.12
 
@@ -320,7 +320,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             python eval.py
         ```
     - 결과
-        - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpeg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" width="100%"></a>
         - Character Accuracy: 70.83
         - Word Accuracy: 0.53
 
@@ -385,7 +385,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python eval.py
         ```
     - 결과
-        - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpeg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" width="100%"></a>
         - Character Accuracy: 83.33
         - Word Accuracy: 0.66
 
@@ -418,7 +418,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" width="100%"></a>
 - CRNN으로 테스트
     - 결과
-        - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpeg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" width="100%"></a>
         - Character Accuracy: 83.33
         - Word Accuracy: 0.66
 
@@ -460,7 +460,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" width="100%"></a>
     - CRNN으로 테스트
         - 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/12_4_myfont_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/12_4_myfont_eval.jpeg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/12_4_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/12_4_myfont_eval.jpg" width="100%"></a>
             - Character Accuracy: 86.46
             - Word Accuracy: 0.72
 
@@ -489,7 +489,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" width="100%"></a>
     - CRNN으로 테스트
         - 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/14_4_manipulated_myfont_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/14_4_manipulated_myfont_eval.jpeg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/14_4_manipulated_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/14_4_manipulated_myfont_eval.jpg" width="100%"></a>
             - Character Accuracy: 86.98
             - Word Accuracy: 0.72
 
@@ -519,7 +519,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" width="100%"></a>
     - CRNN으로 테스트
         - 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/16_5_short_space_myfont_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/16_5_short_space_myfont_eval.jpeg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/16_5_short_space_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/16_5_short_space_myfont_eval.jpg" width="100%"></a>
             - Character Accuracy: 74.48
             - Word Accuracy: 0.53
 
@@ -555,7 +555,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" width="100%"></a>
     - CRNN으로 테스트
         - 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/18_6_static_skew_myfont_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/18_6_static_skew_myfont_eval.jpeg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/18_6_static_skew_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/18_6_static_skew_myfont_eval.jpg" width="100%"></a>
             - Character Accuracy: 67.19
             - Word Accuracy: 0.34
 
@@ -589,7 +589,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         - <a href="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" width="100%"></a>
     - CRNN으로 테스트
         - 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/20_7_broad_width_myfont_eval.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/20_7_broad_width_myfont_eval.jpeg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/20_7_broad_width_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/20_7_broad_width_myfont_eval.jpg" width="100%"></a>
             - Character Accuracy: 100.0
             - Word Accuracy: 1.00
 
@@ -605,7 +605,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - 5 epoch 동안 학습
 - CRNN으로 테스트
     - 결과
-        - <a href="/assets/img/2023-03-29-learning-crnn/21_change_transforms.jpeg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/21_change_transforms.jpeg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/21_change_transforms.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/21_change_transforms.jpg" width="100%"></a>
         - Character Accuracy: 56.57
         - Word Accuracy: 0.24
         - 역시 이 정도의 data_augmentation으로는  
