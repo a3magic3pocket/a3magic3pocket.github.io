@@ -87,8 +87,8 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         ```
     - 예시
         - outputs 디렉토리 하위에 아래 이미지 들이 생성된 것을 볼 수 있다.
-        - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" width="100%"></a>
-        - <a href="/assets/img/2023-03-29-learning-crnn/01_normal_data_1.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/01_normal_data_1.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" width="30%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/01_normal_data_1.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/01_normal_data_1.jpg" width="30%"></a>
 
 
 ## CRNN
@@ -211,9 +211,9 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             수정한다.
     - 예시
         - 원본 속도 이미지
-            - <a href="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.jpg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/02_raw_velocity.jpg" width="30%"></a>
         - 정제 결과
-            - <a href="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" width="100%"></a>
+            - <a href="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/03_inverted_velocity.jpg" width="30%"></a>
     - 명령  
         ```bash
         # refine.py 위치로 이동
@@ -230,7 +230,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             [정답]_[랜덤숫자].[확장자]
         - 예시
             - 이미지
-                - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" width="100%"></a>
+                - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" width="30%"></a>
             - 파일명
                 - 8589_1234.png
 
@@ -359,7 +359,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/venus-rising-rg.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/07_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/07_venus.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/07_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/07_venus.jpg" width="30%"></a>
     - 결과
         - TextRecognitionDataGenerator/trdg/outputs에 저장됨  
 - CRNN으로 학습
@@ -415,7 +415,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/venus-rising-rg.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/09_manipulated_venus.jpg" width="30%"></a>
 - CRNN으로 테스트
     - 결과
         - <a href="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/06_1_manipulated_eval.jpg" width="100%"></a>
@@ -457,7 +457,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/11_myfont.jpg" width="30%"></a>
     - CRNN으로 테스트
         - 결과
             - <a href="/assets/img/2023-03-29-learning-crnn/12_4_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/12_4_myfont_eval.jpg" width="100%"></a>
@@ -486,7 +486,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -rk -rbl -d 3 -do 2
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/13_manipluated_myfont.jpg" width="30%"></a>
     - CRNN으로 테스트
         - 결과
             - <a href="/assets/img/2023-03-29-learning-crnn/14_4_manipulated_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/14_4_manipulated_myfont_eval.jpg" width="100%"></a>
@@ -516,7 +516,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -cs -2 -t 4
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/15_short_space_myfont.jpg" width="30%"></a>
     - CRNN으로 테스트
         - 결과
             - <a href="/assets/img/2023-03-29-learning-crnn/16_5_short_space_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/16_5_short_space_myfont_eval.jpg" width="100%"></a>
@@ -552,7 +552,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/my-font-regular.otf -c 5000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -k 345
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/17_static_skew_myfont.jpg" width="30%"></a>
     - CRNN으로 테스트
         - 결과
             - <a href="/assets/img/2023-03-29-learning-crnn/18_6_static_skew_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/18_6_static_skew_myfont_eval.jpg" width="100%"></a>
@@ -586,7 +586,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
         python run.py -ft fonts/custom/my-font-regular.otf -c 10000 --output_dir outputs -rs -num -w 1 -fi -im L -t 4 -wd 100
         ```
     - 예시
-        - <a href="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" width="100%"></a>
+        - <a href="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/19_broad_width.jpg" width="30%"></a>
     - CRNN으로 테스트
         - 결과
             - <a href="/assets/img/2023-03-29-learning-crnn/20_7_broad_width_myfont_eval.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/20_7_broad_width_myfont_eval.jpg" width="100%"></a>
