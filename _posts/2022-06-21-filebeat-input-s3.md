@@ -61,26 +61,26 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
 - 설명
     - s3를 읽어오도록 filebeat.inputs를 설정한다.
 - 설정
-    - ```bash
-        # ./filebeat-8.2.3-linux-x86_64/filebeat.yml
-        filebeat.inputs:
-        # Each - is an input. Most options can be set at the input level, so
-        # you can use different inputs for various configurations.
-        # Below are the input specific configurations.
-        - type: aws-s3
-          fields:
-            index_name: "my-test-log"
-          enabled: true
-          tags: ["test"]
-          bucket_arn: arn:aws:s3:::my-log-bucket
-          bucket_list_prefix: WEB/access
-          number_of_workers: 5
-          bucket_list_interval: 30s
-          credential_profile_name: default
-          file_selectors:
-            - regex: '/log_[0-9]{8}.log$'
-              expand_event_list_from_field: Records
-        ```
+    - ```bash  
+        # ./filebeat-8.2.3-linux-x86_64/filebeat.yml  
+        filebeat.inputs:  
+        # Each - is an input. Most options can be set at the input level, so  
+        # you can use different inputs for various configurations.  
+        # Below are the input specific configurations.  
+        - type: aws-s3  
+          fields:  
+            index_name: "my-test-log"  
+          enabled: true  
+          tags: ["test"]  
+          bucket_arn: arn:aws:s3:::my-log-bucket  
+          bucket_list_prefix: WEB/access  
+          number_of_workers: 5  
+          bucket_list_interval: 30s  
+          credential_profile_name: default  
+          file_selectors:  
+            - regex: '/log_[0-9]{8}.log$'  
+              expand_event_list_from_field: Records  
+        ```  
 - 주요 설정 설명
     - type
         - aws-s3로 해야 s3 input을 읽을 수 있다.
