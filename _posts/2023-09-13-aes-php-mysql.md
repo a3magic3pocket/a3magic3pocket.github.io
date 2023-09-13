@@ -44,6 +44,6 @@ class AES {
 
 ## 주의사항
 - openssl_encrypt 함수에 OPENSSL_RAW_DATA 옵션을 주지 않으면  
-  base64로 인코딩되어서 암호화된 문자열가 리턴된다.  
+  base64로 인코딩되어서 암호화된 문자열이 리턴된다.  
 - openssl_decrypt 함수에 OPENSSL_RAW_DATA 옵션을 주지 않으면  
   입력 받은 문자열이 base64 인코인되었다고 가정하고 처리한다.  
