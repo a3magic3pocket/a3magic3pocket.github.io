@@ -136,4 +136,4 @@ tags: [javascript, golang] # TAG names should always be lowercase
 - [inline level elements 예시](http://web.simmons.edu/~grovesd/comm244/notes/week4/block-inline){:target="\_blank"}
 - [HTML Block and Inline Elements](https://www.w3schools.com/html/html_blocks.asp){:target="\_blank"}
 - [Javascript) innerText vs innerHTML](https://hi098123.tistory.com/83){:target="\_blank"}
-
+- [html-guide-beginners](https://www.websiteplanet.com/blog/html-guide-beginners/){:target="\_blank"}
