@@ -80,7 +80,7 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
           file_selectors:
             - regex: '/log_[0-9]{8}.log$'
               expand_event_list_from_field: Records
-      ```
+        ```
 - 주요 설정 설명
     - type
         - aws-s3로 해야 s3 input을 읽을 수 있다.
