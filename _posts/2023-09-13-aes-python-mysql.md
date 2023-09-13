@@ -68,8 +68,8 @@ tags: [aes, python, mysql]    # TAG names should always be lowercase
       메세지의 끝 부분이 블록크기보다 작다면 패딩을 해야한다.  
     - 패딩은 Python PyCryptodome과 MySQL 모두 PKCS#7이 패딩 기본값이다.  
 
-## MySQL DB
-```  
+## MySQL
+```sql  
 -- 모드 설정  
 SET block_encryption_mode = 'aes-256-cbc';  
         
@@ -86,7 +86,7 @@ select CONVERT(AES_DECRYPT(UNHEX('1362343BD1B9633175CF6FBEFCF96BE3'), @key, @iv)
 ```  
 
 ## python
-```  
+```python  
 from Crypto.Cipher import AES  
 from Crypto.Util.Padding import pad, unpad  
 import hashlib  

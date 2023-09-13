@@ -6,7 +6,7 @@ tags: [aes, php, mysql]    # TAG names should always be lowercase
 ---
 
 ## php 예시
-```  
+```php  
 class AES {  
         
 	function encrypt(string $message, string $key, string $iv)   
