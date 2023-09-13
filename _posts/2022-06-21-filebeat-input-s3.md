@@ -62,6 +62,7 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
     - s3를 읽어오도록 filebeat.inputs를 설정한다.
 - 설정
     - ```bash
+    
         # ./filebeat-8.2.3-linux-x86_64/filebeat.yml  
         filebeat.inputs:  
         # Each - is an input. Most options can be set at the input level, so  
@@ -80,6 +81,7 @@ tags: [elk, elasticsearch, filebeat]    # TAG names should always be lowercase
           file_selectors:  
             - regex: '/log_[0-9]{8}.log$'  
               expand_event_list_from_field: Records  
+
         ```
 - 주요 설정 설명
     - type
