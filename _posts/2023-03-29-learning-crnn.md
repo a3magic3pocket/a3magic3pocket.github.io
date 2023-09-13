@@ -232,7 +232,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             - 이미지
                 - <a href="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" target="_blank"><img src="/assets/img/2023-03-29-learning-crnn/00_normal_data_0.jpg" width="30%"></a>
             - 파일명
-                - 8589_1234.png
+                - 0000_1234.png
 
 
 ## CRNN test 해보기
@@ -612,8 +612,8 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
             부족한가보다
 
 ## 느낀점
-- 작은 부분부터 차근차근 해결하는 딥러닝에서 학습시킬 때  
-    접근 방법이 좋은 것 같다.
+- 작은 부분부터 차근차근 해결하는 방법 접근 방법이  
+  딥러닝 모델 학습시킬 때 도움이 되는 것 같다.
 - [meijieru/crnn.pytorch](https://github.com/meijieru/crnn.pytorch)의 README.md 하단 문구를 보면  
     'sort the image according to the text length'라는 문구가 있다.  
     개별 문자의 feature를 먼저 학습 시키는 쪽이   
@@ -630,20 +630,20 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 
 ## CRNN 학습 유의사항
 - lr(learning rate)  
-    - lr을 너무 키우면 loss가 점점 커서 발산하여  
+    - lr을 너무 키우면 loss가 점점 커져서 발산하여  
         모델 학습에 실패한다.
     - [Building a custom OCR using pytorch](https://deepayan137.github.io/blog/markdown/2020/08/29/building-ocr.html)(이하 OCR블로그) 에서    
         lr 기본 값은 0.001이었다.
     - 아마도 OCR블로그 문제에서   
         alphabet(영문, 특수문자 포함)이 나보다 훨씬 많기 때문에  
         초반 local minima 를 찾기 위해 비교적 큰 lr이 필요하지 않을까  
-        생각해보았다.
+        생각한다.
 - nClasses
     - nClasses 수를 len(alphabet)로 하면   
         CTCLoss가 NaN이 되어 학습에 실패한다.
     - nClasses 수를 alphabet 수와 동일하게 하면  
         CTCLoss 계산 시 공란(-) 라벨이 없기 때문에  
-        학습하지 못하고 발산하는 것으로 추정된다.
+        학습하지 못하고 발산하는 것으로 추정한다.
 - 그 외 CTCLoss 학습 실패 시
     - [Best practices to solve NaN CTC loss - PyTorch Forums](https://discuss.pytorch.org/t/best-practices-to-solve-nan-ctc-loss/151913/1)  참고
 
@@ -660,7 +660,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - 학습 및 추론 시 lmdb를 사용하여 데이터를 불러온다.  
         lmdb에 데이터를 전처리하여 넣는 코드가 있는데  
         python2를 사용 중이다.
-    - CTCLoss는 gcc 5를 사용 중인데  
+    - CTCLoss는 빌드 시 gcc 5를 사용 중인데  
         ubuntu 14.04 에나 설치된 오래된 버전이라  
         사용하기 어렵다.
 - 목표
@@ -670,7 +670,7 @@ tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
     - lmdb를 사용한 데이터 전처리 코드 python3에서 동작하도록 포팅
     - crnn 코드 python3에서 동작하도록 포팅
     - CTCLoss를 torch.nn.CTCLoss로 변경
-    - CRNN 모델에서 마지막 BiLSTM Layer의 크기를  
+    - CRNN 모델에서 마지막 BiLSTM Layer의 outputs 크기를  
         11로 변경(0123456789 + 공란 수)
     -  CRNN 모델 초기화 부분에서  
         학습된 Weight의 CNN 부분만 로드하도록 수정
