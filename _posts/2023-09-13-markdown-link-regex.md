@@ -7,7 +7,7 @@ tags: [markdown, regex]    # TAG names should always be lowercase
 
 ## 개요
 - 마크다운 문서에서 링크만 추출하여   
-  모든 링크에 '{:target="_blank"}'을 추가하는   
+  모든 링크에 '\{:target="_blank"\}'을 추가하는   
   golang 프로그램을 작성하고자 한다.  
 - 마크다운 이미지와 마크다운 문서를 구분하기 위해  
   가장 앞에 !가 붙는지 안 붙는지 정규식에서 판단해야한다.  
@@ -23,7 +23,7 @@ tags: [markdown, regex]    # TAG names should always be lowercase
   [링크이름](링크)  
   ```  
 - 새 창에서 열기  
-  ```  
+  ```markdown  
   [링크이름](링크){:target="_blank"}  
   ```  
 
@@ -44,7 +44,7 @@ tags: [markdown, regex]    # TAG names should always be lowercase
 
 ## 앞에 !가 오면 추출하지 않는 마크다운 링크 정규식
 - 정규식  
-  ```  
+  ```markdown  
   [^!]\[.*?\]\(.+?\)  
   ```  
 - 설명  
@@ -53,7 +53,7 @@ tags: [markdown, regex]    # TAG names should always be lowercase
 
 ## 앞에 ! 외의 다른 글자가 오거나 [로 시작하는 마크다운 링크 정규식
 - 정규식  
-  ```  
+  ```markdown  
   [^!]\[.*?\]\(.+?\)|^\[.*?\]\(.+?\)  
   ```  
 - 설명  
@@ -66,8 +66,8 @@ tags: [markdown, regex]    # TAG names should always be lowercase
     - 이후 다시 링크를 추출한 후 blank구문을 추가한다.  
 - {:target="_blank"}(이하 blank구문)가 붙은 마크다운 링크 정규식  
     - 정규식  
-      ```  
-      `[^!]\[.*?\]\(.+?\)(\s*{:target\s*=\s*["']_blank["']\s*})|^\[.*?\]\(.+?\)(\s*{:target\s*=\s*["']_blank["']\s*})`  
+      ```markdown  
+      [^!]\[.*?\]\(.+?\)(\s*{:target\s*=\s*["']_blank["']\s*})|^\[.*?\]\(.+?\)(\s*{:target\s*=\s*["']_blank["']\s*})  
       ```  
     - 설명  
         - 정규식에서 blank구문을  캡쳐한다.  
@@ -121,7 +121,7 @@ tags: [markdown, regex]    # TAG names should always be lowercase
       }  
             
       return row  
-            
+    }
   ```  
 
 ## 참고

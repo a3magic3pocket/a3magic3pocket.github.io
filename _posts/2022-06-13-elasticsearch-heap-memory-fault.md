@@ -49,8 +49,8 @@ tags: [elk, elasticsearch, heap]    # TAG names should always be lowercase
     - heap 메모리는 32GB 미만으로 설정 가능하다.
     - heap의 최소값은 물리적 RAM의 50% 이상으로 설정하지 않는 것이 좋다고 한다.
     - heap 메모리를 크게 잡으면 캐싱하기에는 유리하나, Garbage collect 시간이 늘어나서 시스템 성능 저하에 원인이 될 수 있다고 한다.
-    - 참고 - [갓.바.조.아 | ElasticSearch Heap 사이즈 설정](https://springboot.cloud/17){:target="_blank"}
+    - 참고 - [갓.바.조.아 ElasticSearch Heap 사이즈 설정](https://springboot.cloud/17){:target="_blank"}
 
 ## 참고
 - [엘라스틱서치 공식 홈페이지 Set JVM options](https://www.elastic.co/guide/en/elasticsearch/reference/current/advanced-configuration.html){:target="_blank"}
-- [갓.바.조.아 | ElasticSearch Heap 사이즈 설정](https://springboot.cloud/17){:target="_blank"}
+- [갓.바.조.아 ElasticSearch Heap 사이즈 설정](https://springboot.cloud/17){:target="_blank"}

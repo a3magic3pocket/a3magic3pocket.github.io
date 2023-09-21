@@ -50,11 +50,11 @@ tags: [dynalist, memo] # TAG names should always be lowercase
             설명2  
             설명3  
 - 설명문구로 전환 후 코드 블록으로 복사
-    - 설명문구로 전환
+    - 설명문구로 전환  
         ```
         hello
         world
-          ```
+        ```
 
 
 ## 참고

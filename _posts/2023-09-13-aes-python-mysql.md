@@ -91,7 +91,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad  
 import hashlib  
         
-key_phrase = 'hello world  
+key_phrase = 'hello world'  
 iv = '1234567890123456'  
         
 def encrypt(message):  
