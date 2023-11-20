@@ -25,5 +25,5 @@ const YourClientOnly= dynamic(
 ```  
 
 ## 참고
-- [Optimizing: Lazy Loading | Next.js nextjs.org](https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#skipping-ssr){:target="_blank"}  
+- [Optimizing: Lazy Loading Next.js nextjs.org](https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#skipping-ssr){:target="_blank"}  
 - [javascript - Getting errors when rendering a component with dynamic in Next.js - Stack Overflow](https://stackoverflow.com/questions/75370064/getting-errors-when-rendering-a-component-with-dynamic-in-next-js){:target="_blank"}  
