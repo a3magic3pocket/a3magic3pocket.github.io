@@ -111,6 +111,7 @@ tags: [certbot, route53, nginx]    # TAG names should always be lowercase
               location / {  
                   # your setting ...  
               }  
+          }
                     
           ```  
         - 이제 호스트서버 인증서 경로와 웹 nginx 서비스 인증서 경로를 연결한다.  
