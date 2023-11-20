@@ -27,10 +27,10 @@ tags: [react, next, react-portal]    # TAG names should always be lowercase
   export default function Page() {  
     return (  
       <div>  
-        <div>사과</div>  
-        <div>배</div>  
-        <div>참외</div>  
-      </div>  
+        <div>사과</div>
+        <div>배</div>
+        <div>참외</div>
+      </div>
     );  
   }  
   ```  
@@ -80,10 +80,10 @@ tags: [react, next, react-portal]    # TAG names should always be lowercase
     return (  
       <>  
         <div ref={fruitsRef}>  
-          <div>사과</div>  
-          <div>배</div>  
-          <div>수박</div>  
-        </div>  
+          <div>사과</div>
+          <div>배</div>
+          <div>수박</div>
+        </div>
             
         {/* 과일 삭제 버튼 포탈 렌더 */}  
         {closeButtons}  
@@ -93,9 +93,9 @@ tags: [react, next, react-portal]    # TAG names should always be lowercase
             
   ```  
 - react port 적용 전  
-    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' width='50%' height='50%'></a>  
+    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' width='20%' height='20%'></a>  
 - react port 적용 후  
-    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' width='50%' height='50%'></a>  
+    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' width='20%' height='20%'></a>  
 
 ## 참고
 - [createPortal – React](https://react.dev/reference/react-dom/createPortal){:target="_blank"}  
