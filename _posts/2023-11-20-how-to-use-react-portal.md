@@ -93,9 +93,9 @@ tags: [react, next, react-portal]    # TAG names should always be lowercase
             
   ```  
 - react port 적용 전  
-    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' width='80%' height='80%'></a>  
+    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/00-origin.jpg' width='50%' height='50%'></a>  
 - react port 적용 후  
-    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' width='80%' height='80%'></a>  
+    - <a href='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' target='_blank'><img src='/assets/img/2023-11-20-how-to-use-react-portal/01-react-portal.jpg' width='50%' height='50%'></a>  
 
 ## 참고
 - [createPortal – React](https://react.dev/reference/react-dom/createPortal){:target="_blank"}  
