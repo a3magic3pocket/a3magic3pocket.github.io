@@ -190,7 +190,7 @@ tags: [react, useeffect, cleanup, zustand]    # TAG names should always be lower
           ```  
                     
     - 결과  
-        - <a href='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success' target='_blank'><img src='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success' width='80%' height='80%'></a>  
+        - <a href='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success.jpg' target='_blank'><img src='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success.jpg' width='80%' height='80%'></a>  
 - zustand state를 trigger로 사용하고 useEffect cleanUp 함수를 사용하지 않은 경우  
     - 설명  
         - step이 trigger이다.  
@@ -462,7 +462,7 @@ tags: [react, useeffect, cleanup, zustand]    # TAG names should always be lower
                     
           ```  
     - 결과  
-        - <a href='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success' target='_blank'><img src='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success' width='80%' height='80%'></a>  
+        - <a href='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success.jpg' target='_blank'><img src='/assets/img/2023-11-20-render-react-state-using-useEffect-cleanup-function/01-success.jpg' width='80%' height='80%'></a>  
 
 ## 덧붙이는 말
 - 첫 useEffect 실행결과를 렌더시킨 후   
