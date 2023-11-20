@@ -162,27 +162,27 @@ tags: [react, useeffect, cleanup, zustand]    # TAG names should always be lower
                   onClick={() => {  
                     setStep("first");  
                   }}  
-                >  
+                >
                   답변  
-                </button>  
-                <div>  
+                </button>
+                <div>
                   {chats.map((chat, i) => {  
                     if (chat.chatType === "answer") {  
                       return (  
-                        <div style={answerStyle} key={i}>  
+                        <div style={answerStyle} key={i}>
                           {chat.content}  
-                        </div>  
+                        </div>
                       );  
                     }  
                     
                     return (  
-                      <div style={questionStyle} key={i}>  
+                      <div style={questionStyle} key={i}>
                         {chat.content}  
-                      </div>  
+                      </div>
                     );  
                   })}  
-                </div>  
-              </>  
+                </div>
+              </>
             );  
           }  
           ```  
@@ -310,25 +310,25 @@ tags: [react, useeffect, cleanup, zustand]    # TAG names should always be lower
                   }}  
                 >  
                   답변  
-                </button>  
-                <div>  
+                </button>
+                <div>
                   {chats.map((chat, i) => {  
                     if (chat.chatType === "answer") {  
                       return (  
-                        <div style={answerStyle} key={i}>  
+                        <div style={answerStyle} key={i}>
                           {chat.content}  
-                        </div>  
+                        </div>
                       );  
                     }  
                     
                     return (  
-                      <div style={questionStyle} key={i}>  
+                      <div style={questionStyle} key={i}>
                         {chat.content}  
-                      </div>  
+                      </div>
                     );  
                   })}  
-                </div>  
-              </>  
+                </div>
+              </>
             );  
           }  
                     
@@ -435,25 +435,25 @@ tags: [react, useeffect, cleanup, zustand]    # TAG names should always be lower
                   }}  
                 >  
                   답변  
-                </button>  
-                <div>  
+                </button>
+                <div>
                   {chats.map((chat, i) => {  
                     if (chat.chatType === "answer") {  
                       return (  
-                        <div style={answerStyle} key={i}>  
+                        <div style={answerStyle} key={i}>
                           {chat.content}  
-                        </div>  
+                        </div>
                       );  
                     }  
                     
                     return (  
-                      <div style={questionStyle} key={i}>  
+                      <div style={questionStyle} key={i}>
                         {chat.content}  
-                      </div>  
+                      </div>
                     );  
                   })}  
-                </div>  
-              </>  
+                </div>
+              </>
             );  
           }  
                     
