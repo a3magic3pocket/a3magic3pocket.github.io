@@ -92,4 +92,4 @@ tags: [rds, ec2, security-group]    # TAG names should always be lowercase
 
 ## 참고
 - [AWS EC2에 AWS RDS 연동하기](https://ndb796.tistory.com/226){:target="_blank"}
-
+- [AWS - RDS Connection timed out 연결 오류 해결](https://green-bin.tistory.com/34){:target="_blank"}
