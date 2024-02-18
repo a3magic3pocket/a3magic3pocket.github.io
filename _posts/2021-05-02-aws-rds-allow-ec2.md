@@ -84,10 +84,10 @@ tags: [rds, ec2, security-group]    # TAG names should always be lowercase
   - 실패 메세지가 바로 안 나오고 time out 될 때까지 대기한다면  
   보안그룹 변경이 실패한 것
 
-## 그래도 안된다면
-- RDS와 연결된 서브넷의 vpc가 인터넷에 공개되어있지 않다면  
-  보안그룹에서 허용해도 외부에서 rds로 연결 접속 할 수가 없다.
-- vpc 라우팅 테이블에 인터넷 게이트웨이를 추가한다.
+## AWS EC2에서 RDS 접속은 되는데 외부에서 RDS 접속이 되지 않는 경우
+- RDS 보안그룹 인바운드 룰에 외부에서 접속하는 ip와 포트를 추가한다.
+- 그래도 안된다면 RDS와 연결된 서브넷의 vpc 라우팅 테이블에   
+  인터넷 게이트웨이를 추가한다.
 - [vpc 라우팅 테이블 추가](https://green-bin.tistory.com/34){:target="_blank"}
 
 ## 참고
