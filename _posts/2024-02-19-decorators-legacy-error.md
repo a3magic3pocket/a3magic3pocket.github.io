@@ -1,5 +1,5 @@
 ---
-title: Syntax error\: Support for the experimental syntax 'decorators-legacy' isn't currently enabled
+title: Support for the experimental syntax 'decorators-legacy' isn't currently enabled
 date: 2024-02-19 12:07:53 +0900
 categories: [Javascript]
 tags: [babel]    # TAG names should always be lowercase
