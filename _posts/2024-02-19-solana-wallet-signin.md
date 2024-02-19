@@ -227,7 +227,7 @@ tags: [solana, next, react]    # TAG names should always be lowercase
               <>  
                 {session.user.image && (  
                   <span  
-                    style={{ backgroundImage: "url('" + `${session.user.image}` + "')" }}  
+                    {% raw %}style={{ backgroundImage: "url('" + `${session.user.image}` + "')" }}{% endraw %}  
                     className={styles.avatar}  
                   />  
                 )}  
