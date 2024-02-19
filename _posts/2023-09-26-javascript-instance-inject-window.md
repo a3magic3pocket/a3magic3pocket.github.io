@@ -1,7 +1,7 @@
 ---
 title: javascript, 개별 instance를 전역에서 접근할 수 있도록 변경
 date: 2023-09-26 22:54:58 +0900
-categories: [javascript]
+categories: [Javascript]
 tags: [javascript]    # TAG names should always be lowercase
 ---
 
