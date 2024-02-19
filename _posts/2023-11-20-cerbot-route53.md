@@ -1,7 +1,7 @@
 ---
 title: certbot, DNS 인증 시 자동 갱신하게 만들기(AWS Route 53)
 date: 2023-11-20 18:29:45 +0900
-categories: [certbot]
+categories: [Certbot]
 tags: [certbot, route53, nginx]    # TAG names should always be lowercase
 ---
 

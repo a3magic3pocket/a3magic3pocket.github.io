@@ -1,7 +1,7 @@
 ---
 title: Docker swarm mode을 이용하여 웹 애플리케이션 운영하기
 date: 2023-02-08 23:56:00 +0900
-categories: [docker]
+categories: [Docker]
 tags: [docker, docker-swarm, git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 ---
 ## docker swarm mode 란

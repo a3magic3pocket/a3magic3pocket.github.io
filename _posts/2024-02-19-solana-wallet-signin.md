@@ -1,7 +1,7 @@
 ---
 title: solana DApp 인증 구현
 date: 2024-02-19 10:48:24 +0900
-categories: [react]
+categories: [React]
 tags: [solana, next, react]    # TAG names should always be lowercase
 ---
 

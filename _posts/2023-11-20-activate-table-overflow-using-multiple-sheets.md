@@ -1,7 +1,7 @@
 ---
 title: multiple sheets 사용 시 tableOverflow 활성화하기(jspreadsheet-ce)
 date: 2023-11-20 18:01:59 +0900
-categories: [jspreadsheet-ce]
+categories: [Javascript]
 tags: [jspreadsheet-ce]    # TAG names should always be lowercase
 ---
 

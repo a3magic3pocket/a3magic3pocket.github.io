@@ -1,7 +1,7 @@
 ---
 title: useEffect cleanUp 함수를 이용하여 react state를 순차적으로 제어하기(zustand)
 date: 2023-11-20 17:54:37 +0900
-categories: [react]
+categories: [React]
 tags: [react, useeffect, cleanup, zustand]    # TAG names should always be lowercase
 ---
 

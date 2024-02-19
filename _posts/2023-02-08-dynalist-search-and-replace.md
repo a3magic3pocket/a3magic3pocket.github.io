@@ -1,7 +1,7 @@
 ---
 title: dynalist 검색 및 변경(search and replace)
 date: 2023-02-08 22:42:00 +0900
-categories: [dynalist]
+categories: [Dynalist]
 tags: [dynalist, memo] # TAG names should always be lowercase
 ---
 ## 현재 문서 전체에서 검색 및 변경

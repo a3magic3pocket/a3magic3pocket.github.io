@@ -1,7 +1,7 @@
 ---
 title: Kubernetes(minikube)를 이용하여 웹 애플리케이션 운영하기
 date: 2023-02-14 00:42:00 +0900
-categories: [kubernetes]
+categories: [Kubernetes]
 tags: [kubernetes, minikube, docker, git, git-action, dockerhub, cicd] # TAG names should always be lowercase
 ---
 # Kubernetes란

@@ -1,7 +1,7 @@
 ---
 title: Apache에서 TLSv1, TLSv1.1 접근 막기
 date: 2023-09-13 20:26:23 +0900
-categories: [webserver]
+categories: [Webserver]
 tags: [apache, tls, ssl]    # TAG names should always be lowercase
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: nginx, AWS cloudfront로 리버스 프록시 설정 에러
 date: 2023-09-26 22:03:12 +0900
-categories: [nginx]
+categories: [Nginx]
 tags: [nginx, aws, cloudfront]    # TAG names should always be lowercase
 ---
 

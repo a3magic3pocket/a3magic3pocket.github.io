@@ -1,7 +1,7 @@
 ---
 title: dynalist 여러 줄 코드 블럭 사용하기(multi line code block)
 date: 2023-02-08 22:42:00 +0900
-categories: [dynalist]
+categories: [Dynalist]
 tags: [dynalist, memo] # TAG names should always be lowercase
 ---
 ## 기본 코드 블록 사용법

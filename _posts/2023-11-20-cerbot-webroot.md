@@ -1,7 +1,7 @@
 ---
 title: certbot, webroot 방식으로 인증서 발급받기
 date: 2023-11-20 18:28:45 +0900
-categories: [certbot]
+categories: [Certbot]
 tags: [cerbot, nginx]    # TAG names should always be lowercase
 ---
 

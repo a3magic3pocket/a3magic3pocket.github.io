@@ -1,7 +1,7 @@
 ---
 title:  juqery library element에 React component 연동하기(react portal)
 date: 2023-11-20 17:38:29 +0900
-categories: [react]
+categories: [React]
 tags: [react, next, react-portal]    # TAG names should always be lowercase
 ---
 

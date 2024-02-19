@@ -1,7 +1,7 @@
 ---
 title: CRNN으로 숫자 OCR 학습시키기
 date: 2023-03-29 01:30:00 +0900
-categories: [crnn]
+categories: [CRNN]
 tags: [deeplearning, crnn, pytorch] # TAG names should always be lowercase
 ---
 

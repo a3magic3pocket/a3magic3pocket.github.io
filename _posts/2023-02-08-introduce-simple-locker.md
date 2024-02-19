@@ -1,7 +1,7 @@
 ---
 title: SIMPLE-LOCKER 간단한 설명
 date: 2023-02-08 23:01:00 +0900
-categories: [prototype]
+categories: [Prototype]
 tags: [prototype] # TAG names should always be lowercase
 ---
 ## 소개

@@ -1,7 +1,7 @@
 ---
 title: Markdown link 정규식(regular expression)
 date: 2023-09-13 19:16:35 +0900
-categories: [regex]
+categories: [Regex]
 tags: [markdown, regex]    # TAG names should always be lowercase
 ---
 

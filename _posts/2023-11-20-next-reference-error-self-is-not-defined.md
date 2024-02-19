@@ -1,7 +1,7 @@
 ---
 title: "next.js 빌드 시 ReferenceError: self is not defined 해결"
 date: 2023-11-20 18:15:03 +0900
-categories: [react]
+categories: [React]
 tags: [next, react]    # TAG names should always be lowercase
 ---
 

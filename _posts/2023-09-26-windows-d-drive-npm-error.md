@@ -1,7 +1,7 @@
 ---
 title: windows-nvm d drive 설치 시 npm 인식 못하는 이슈
 date: 2023-09-26 21:59:21 +0900
-categories: [node]
+categories: [Node]
 tags: [windows-nvm, npm]    # TAG names should always be lowercase
 ---
 

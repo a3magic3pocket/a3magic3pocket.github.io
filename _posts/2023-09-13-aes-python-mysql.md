@@ -1,7 +1,7 @@
 ---
 title: Python과 MySQL 간 AES 암호화
 date: 2023-09-13 20:20:20 +0900
-categories: [encryption]
+categories: [Encryption]
 tags: [aes, python, mysql]    # TAG names should always be lowercase
 ---
 
