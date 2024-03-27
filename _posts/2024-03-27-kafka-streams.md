@@ -1,6 +1,6 @@
 ---
 title: 카프카 스트림이란?(kafka stream)
-date: 2024-03-27 19:59:41 +0900
+date: 2024-03-27 20:14:04 +0900
 categories: [kafka]
 tags: [kafka, kafka-streams]    # TAG names should always be lowercase
 ---
@@ -107,28 +107,35 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
   ```  
 - blog/BlogController.java  
   ```java  
+  @RequestMapping(value = "/count-blog-views")  
   @RequiredArgsConstructor  
   @RestController  
   public class BlogController {  
       public final FactoryBean<StreamsBuilder> countBlogViewsDSLBuilder;  
             
+      // kStream 생성자  
+      @GetMapping(value = "/produce")  
+      public String produceCountBlogViews(@RequestParam(value = "blog-id") String blogId) {  
+          this.kafkaTemplate.send("count-blog-views", blogId);  
+            
+          return "success";  
+      }  
+            
       // 집계 결과를 출력하는 함수  
-      @GetMapping("/count")  
+      @GetMapping("/all")  
       public void printAllCountBlogViews() {  
           StreamsBuilderFactoryBean builder = (StreamsBuilderFactoryBean) countBlogViewsDSLBuilder;  
             
           KafkaStreams kafkaStreams = builder.getKafkaStreams();  
             
           // "countBlogViews"는 Materialized view 이름  
-          ReadOnlyKeyValueStore<String, Expt1Result> view = kafkaStreams  
+          ReadOnlyKeyValueStore<String, String> view = kafkaStreams  
               .store(StoreQueryParameters.fromNameAndType("countBlogViews", QueryableStoreTypes.keyValueStore()));  
             
-          KeyValueIterator<String, Expt1Result> address = view.all();  
+          KeyValueIterator<String, String> address = view.all();  
           address.forEachRemaining(keyValue -> System.out.println("keyValue.toString()++" + keyValue.toString()));  
       }  
   }  
-            
-            
   ```  
 
 ## 참고
@@ -137,5 +144,5 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
 - [참고3 - Enabling Exactly-Once in Kafka Streams](https://www.confluent.io/ko-kr/blog/enabling-exactly-once-kafka-streams/){:target="_blank"}  
 - [참고4 - Threading Model](https://kafka.apache.org/37/documentation/streams/architecture#streams_architecture_threads){:target="_blank"}  
 - [참고5 - Duality of Streams and Tables](https://kafka.apache.org/37/documentation/streams/core-concepts#streams_concepts_duality){:target="_blank"}]에 자세히 설명되어 있  
-- [참고6 - Kafka Streams With Spring Boot](https://www.baeldung.com/spring-boot-kafka-streams){:target="_blank"}]  
+- [참고6 - Kafka Streams With Spring Boot](https://www.baeldung.com/spring-boot-kafka-streams){:target="_blank"}  
 - [참고7 - 카프카 스트림즈 KTable로 선언한 토픽을 key-value 테이블로 사용하기](https://blog.voidmainvoid.net/442){:target="_blank"}  
