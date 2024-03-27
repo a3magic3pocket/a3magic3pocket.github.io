@@ -28,12 +28,12 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
   ```  
 -  expt1/Expt1.java  
   ```java  
-  @Getter  
-  @Setter  
-  public class Expt1 {  
-      public String name;  
-      public String value;  
-  }  
+  @Getter
+  @Setter
+  public class Expt1 {
+      public String name;
+      public String value;
+  }
   ```  
 - expt1/Expt1Serde.java   
   ```java  
