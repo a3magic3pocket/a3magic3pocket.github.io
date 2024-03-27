@@ -139,7 +139,7 @@ implementation 'org.springframework.kafka:spring-kafka'
       ```bash  
       sh kafka-console-consumer.sh --bootstrap-server localhost:9092 \  
         --from-beginning \  
-        --topic xx-topic \  
+        --topic car \  
         --property print.headers=true  
       ```  
     - 응답 예시  
