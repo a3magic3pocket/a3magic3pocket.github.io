@@ -87,69 +87,71 @@ tags: [kafka, kafka-streams, kafka-connect]    # TAG names should always be lowe
 ## docker-compose.yml 파일 작성
 - yml 파일  
   ```yml  
-  # Use root/example as user/password credentials
-  version: '3.8'
-
-  services:
-    kafka:
-      image: apache/kafka:3.7.0
-      restart: unless-stopped
-      hostname: broker
-      container_name: broker
-      ports:
-        - 9092:9092
-        - 9093:9093
-      volumes:
-        - ./kafka/config/secrets:/etc/kafka/secrets
-        - ./kafka/config/file-input:/mnt/shared/config
-      environment:
-        # Environment variables used by kafka scripts will be needed in case of File input.
-        CLUSTER_ID: '4L6g3nShT-eMCtK--X86sw'
-        # Set properties not provided in the file input
-        KAFKA_NODE_ID: 1
-        KAFKA_CONTROLLER_QUORUM_VOTERS: '1@broker:29093'
-        KAFKA_LISTENERS: 'PLAINTEXT_HOST://:9092,SSL://:9093,CONTROLLER://:29093,PLAINTEXT://:19092'
-        # Override an existing property
-        KAFKA_PROCESS_ROLES: 'broker,controller'
-
-
-    mongo:
-      image: mongo:jammy
-      restart: always
-      ports:
-        - 27017:27017
-      volumes:
-        - ./mongodb:/data/db
-      environment:
-        MONGO_INITDB_ROOT_USERNAME: mongodbuser
-        MONGO_INITDB_ROOT_PASSWORD: mongodbpw
-
-    kafka-connect:
-        image: confluentinc/cp-kafka-connect:7.6.0
-        ports:
-          - 8083:8083
-        depends_on:
-          - kafka
-          - mongo
-        environment:
-          CONNECT_BOOTSTRAP_SERVERS: broker:19092
-          CONNECT_REST_PORT: 8083
-          CONNECT_GROUP_ID: "quickstart-avro"
-          CONNECT_CONFIG_STORAGE_TOPIC: "quickstart-avro-config"
-          CONNECT_OFFSET_STORAGE_TOPIC: "quickstart-avro-offsets"
-          CONNECT_STATUS_STORAGE_TOPIC: "quickstart-avro-status"
-          CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1
-          CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
-          CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
-          CONNECT_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
-          CONNECT_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
-          CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
-          CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
-          CONNECT_REST_ADVERTISED_HOST_NAME: "localhost"
-          CONNECT_LOG4J_ROOT_LOGLEVEL: WARN
-          CONNECT_PLUGIN_PATH: "/usr/share/java,/etc/kafka-connect/jars"
-        volumes:
-          - ./kafka-connect/jars:/etc/kafka-connect/jars
+  # Use root/example as user/password credentials  
+  version: '3.8'  
+            
+  services:  
+    kafka:  
+      image: apache/kafka:3.7.0  
+      restart: unless-stopped  
+      hostname: broker  
+      container_name: broker  
+      ports:  
+        - 9092:9092  
+        - 9093:9093  
+      volumes:  
+        - ./kafka/config/secrets:/etc/kafka/secrets  
+        - ./kafka/config/file-input:/mnt/shared/config  
+      environment:  
+        # Environment variables used by kafka scripts will be needed in case of File input.  
+        CLUSTER_ID: '4L6g3nShT-eMCtK--X86sw'  
+        # Set properties not provided in the file input  
+        KAFKA_NODE_ID: 1  
+        KAFKA_CONTROLLER_QUORUM_VOTERS: '1@broker:29093'  
+        KAFKA_LISTENERS: 'PLAINTEXT_HOST://:9092,SSL://:9093,CONTROLLER://:29093,PLAINTEXT://:19092'  
+        # Override an existing property  
+        KAFKA_PROCESS_ROLES: 'broker,controller'  
+            
+            
+    mongo:  
+      image: mongo:jammy  
+      restart: always  
+      ports:  
+        - 27017:27017  
+      volumes:  
+        - ./mongodb:/data/db  
+      environment:  
+        MONGO_INITDB_ROOT_USERNAME: mongodbuser  
+        MONGO_INITDB_ROOT_PASSWORD: mongodbpw  
+            
+    kafka-connect:  
+        image: confluentinc/cp-kafka-connect:7.6.0  
+        ports:  
+          - 8083:8083  
+        depends_on:  
+          - kafka  
+          - mongo  
+        environment:  
+          CONNECT_BOOTSTRAP_SERVERS: broker:19092  
+          CONNECT_REST_PORT: 8083  
+          CONNECT_GROUP_ID: "quickstart-avro"  
+          CONNECT_CONFIG_STORAGE_TOPIC: "quickstart-avro-config"  
+          CONNECT_OFFSET_STORAGE_TOPIC: "quickstart-avro-offsets"  
+          CONNECT_STATUS_STORAGE_TOPIC: "quickstart-avro-status"  
+          CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1  
+          CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1  
+          CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1  
+          CONNECT_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"  
+          CONNECT_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"  
+          CONNECT_INTERNAL_KEY_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"  
+          CONNECT_INTERNAL_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"  
+          CONNECT_REST_ADVERTISED_HOST_NAME: "localhost"  
+          CONNECT_LOG4J_ROOT_LOGLEVEL: WARN  
+          CONNECT_PLUGIN_PATH: "/usr/share/java,/etc/kafka-connect/jars"  
+        volumes:  
+          - ./kafka-connect/jars:/etc/kafka-connect/jars  
+            
+            
   ```  
 - 주의사항  
     - kafka-connect.environment.CONNECT_BOOTSTRAP_SERVERS는  
@@ -166,7 +168,7 @@ tags: [kafka, kafka-streams, kafka-connect]    # TAG names should always be lowe
       [[참고1 - 사용 가능한 Serdes 목록](https://docs.confluent.io/platform/7.6/streams/developer-guide/datatypes.html#available-serdes){:target="_blank"}]  
       (실험 하지 못 함)  
     - aggregate를 이용하여 카프카 스트림 value를 원하는 값으로 변경한다.  
-      [[참고2 - 사용 가능한 Aggregating Transformation 목록](https://docs.confluent.io/platform/current/streams/developer-guide/dsl-api.html#aggregating)]{:target="_blank"}  
+      [[참고2 - 사용 가능한 Aggregating Transformation 목록](https://docs.confluent.io/platform/current/streams/developer-guide/dsl-api.html#aggregating){:target="_blank"}]  
 - 환경  
     - java 21  
     - spring boot 3.2.3  
@@ -177,13 +179,13 @@ tags: [kafka, kafka-streams, kafka-connect]    # TAG names should always be lowe
   ```  
 -  expt1/Expt1.java  
   ```java  
-  @Getter
-  @Setter
-  public class Expt1 {
-      public String name;
-      public String value;
-      public int count;
-  }
+  @Getter  
+  @Setter  
+  public class Expt1 {  
+      public String name;  
+      public String value;  
+      public int count;  
+  }  
   ```  
 - expt1/Expt1Serde.java   
   ```java  
