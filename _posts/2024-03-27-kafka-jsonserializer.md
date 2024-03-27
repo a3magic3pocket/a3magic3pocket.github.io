@@ -8,7 +8,7 @@ tags: [kafka, spring]    # TAG names should always be lowercase
 ## 개요
 - 카프카 생산자(producer)  value serializer를 JsonSerializer로 설정한다.  
 - 카프카 소비자(consumer) value deserializer를 JsonDeserializer로 설정한다.  
-- 소비자마다 다른  json을 message로 받을 수 있도록 한다.  
+- 소비자 그룹마다 다른  json을 message로 받을 수 있도록 한다.  
 
 ## 환경
 - java 21  

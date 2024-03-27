@@ -115,8 +115,8 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
             
       // kStream 생성자  
       @GetMapping(value = "/produce")  
-      public String produceCountBlogViews(@RequestParam(value = "blog-id") String blogId) {  
-          this.kafkaTemplate.send("count-blog-views", blogId);  
+      public String produceCountBlogViews(@RequestParam(value = "post-id") String postId) {  
+          this.kafkaTemplate.send("count-blog-views", postId);  
             
           return "success";  
       }  
