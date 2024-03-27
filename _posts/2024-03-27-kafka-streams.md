@@ -66,7 +66,7 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
       @Value("${spring.kafka.producer.bootstrap-servers}")  
       private String bootstrapServers;  
             
-      KafkaStreamsConfiguration kStreamsConfig(String applicationId, Object valueSerde) {  
+      KafkaStreamsConfiguration kStreamsConfig() {  
           Map<String, Object> props = new HashMap<>();  
           props.put(StreamsConfig.APPLICATION_ID_CONFIG, "my-streams-app");  
           props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);  
@@ -102,8 +102,6 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
           return kStream;  
       }  
   }  
-            
-            
   ```  
 - blog/BlogController.java  
   ```java  
@@ -111,6 +109,7 @@ tags: [kafka, kafka-streams]    # TAG names should always be lowercase
   @RequiredArgsConstructor  
   @RestController  
   public class BlogController {  
+      public final KafkaTemplate<String, String> kafkaTemplate;
       public final FactoryBean<StreamsBuilder> countBlogViewsDSLBuilder;  
             
       // kStream 생성자  
