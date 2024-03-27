@@ -1,7 +1,7 @@
 ---
 title: 카프카 스트림이란?(kafka stream)
 date: 2024-03-27 20:14:04 +0900
-categories: [kafka]
+categories: [Kafka]
 tags: [kafka, kafka-streams]    # TAG names should always be lowercase
 ---
 

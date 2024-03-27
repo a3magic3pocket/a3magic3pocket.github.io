@@ -1,7 +1,7 @@
 ---
 title: spring security 6에서 oauth2.0 구현하기(google)
 date: 2024-03-26 20:37:39 +0900
-categories: [spring]
+categories: [Spring]
 tags: [spring, spring-security]    # TAG names should always be lowercase
 ---
 

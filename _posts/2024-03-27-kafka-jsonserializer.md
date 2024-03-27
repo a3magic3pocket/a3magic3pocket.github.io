@@ -1,7 +1,7 @@
 ---
 title: 카프카, JsonSerializer 사용하기
 date: 2024-03-27 16:35:51 +0900
-categories: [kafka]
+categories: [Kafka]
 tags: [kafka, spring]    # TAG names should always be lowercase
 ---
 

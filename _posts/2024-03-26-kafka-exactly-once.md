@@ -1,7 +1,7 @@
 ---
 title: 카프카, 정확히 한 번(kafka, exactly once)
 date: 2024-03-26 16:00:13 +0900
-categories: [kafka]
+categories: [Kafka]
 tags: [kafka]    # TAG names should always be lowercase
 ---
 

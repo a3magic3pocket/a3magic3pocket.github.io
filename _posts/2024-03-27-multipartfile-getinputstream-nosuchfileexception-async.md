@@ -1,7 +1,7 @@
 ---
 title: MultipartFile.getInputStream() java.nio.file.NoSuchFileException in async
 date: 2024-03-27 17:06:26 +0900
-categories: [spring]
+categories: [Spring]
 tags: [spring]    # TAG names should always be lowercase
 ---
 
