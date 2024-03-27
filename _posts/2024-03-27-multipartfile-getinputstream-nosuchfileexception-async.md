@@ -82,4 +82,4 @@ tags: [spring]    # TAG names should always be lowercase
 
 ## 참고
 - [참고 - Why do I get NoSuchFileException when using multipartFile @Async in java spring boot?](https://stackoverflow.com/questions/77620046/why-do-i-get-nosuchfileexception-when-using-multipartfile-async-in-java-spring){:target="_blank"}  
-- [참고 - FileNotFoundException while uploading multi part file - Spring boot](https://stackoverflow.com/questions/30738574/filenotfoundexception-while-uploading-multi-part-file-spring-boot){:target="_blank"}]  
+- [참고 - FileNotFoundException while uploading multi part file - Spring boot](https://stackoverflow.com/questions/30738574/filenotfoundexception-while-uploading-multi-part-file-spring-boot){:target="_blank"}  
