@@ -2,7 +2,7 @@
 title: 카프카 커넥트(kafka connect), json 스키마 사용하기
 date: 2024-04-05 11:36:01 +0900
 categories: [Kafka]
-tags: [kafka, kafka-connect, json-schema]    # TAG names should always be lowercase
+tags: [kafka, kafka-streams, kafka-connect, json-schema]    # TAG names should always be lowercase
 ---
 
 ## 개요
