@@ -6,7 +6,7 @@ tags: [kafka, kafka-streams, kafka-connect, json-schema]    # TAG names should a
 ---
 
 ## 개요
-- 카프카 스트림  데이터를 mongoDB로 보낼때  
+- 카프카 스트림(kafka streams) 데이터를 mongoDB로 보낼때  
   타입을 명시하고 싶을 때가 있다.  
 - 이때 json 스키마를 사용할 수 있다.  
 - 정해진 포맷에 맞춰 작성 후 데이터를 담아 보내면  
@@ -72,7 +72,7 @@ tags: [kafka, kafka-streams, kafka-connect, json-schema]    # TAG names should a
 ## 카프카, 카프카 스트림, 카프카 커넥트 설정
 - 기본적으로 아래 링크와 동일한 설정이며  
   앞으로의 내용은 변경된 부분을 주로 서술한다.  
-- [카프카 커넥트(kafka connect)로 mongoDB에 카프카 스트림 쓰기 | 의사줌치 (a3magic3pocket.github.io)](https://a3magic3pocket.github.io/posts/write-kafka-stream-to-mongodb-using-kafka-connect/#%EC%B9%B4%ED%94%84%EC%B9%B4-%EC%84%A4%EC%A0%95){:target="_blank"}  
+- [카프카 커넥트(kafka connect)로 mongoDB에 카프카 스트림 쓰기](https://a3magic3pocket.github.io/posts/write-kafka-stream-to-mongodb-using-kafka-connect/#%EC%B9%B4%ED%94%84%EC%B9%B4-%EC%84%A4%EC%A0%95){:target="_blank"}  
 
 ## 카프카 스트림 설정
 - 개요  
