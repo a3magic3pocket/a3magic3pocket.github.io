@@ -208,6 +208,7 @@ tags: [kafka, kafka-connect]    # TAG names should always be lowercase
           같은 키를 가진 문서가 갱신되지 않고 추가만 된다.  
           키로 사용되지 않는 필드를 추가하거나   
           FullKeyStrategy를 사용하여 대응할 수 있다.  
+          [[참고8](https://a3magic3pocket.github.io/posts/mongodb-sink-connector-fullkeystrategy/){:target="_blank"}]  
     - 명령  
       ```bash  
       curl --location 'http://localhost:8083/connectors' \  
@@ -260,5 +261,6 @@ tags: [kafka, kafka-connect]    # TAG names should always be lowercase
 - [참고5 - 이클립스에서 Gralde Project 생성하기(feat. java-library)](https://jiurinie.tistory.com/123){:target="_blank"}  
 - [참고6 - 이클립스에서 gradle 프로젝트 생성하기](https://chinsun9.github.io/2020/10/05/gradle/){:target="_blank"}  
 - [참고7 - 이클립스에서 실행 가능한 JAR 파일 만들기](https://bioinfoblog.tistory.com/242){:target="_blank"}  
+- [참고8 - mongoDB Sink Connector, FullKeyStrategy id-strategy 사용하기](https://a3magic3pocket.github.io/posts/mongodb-sink-connector-fullkeystrategy/){:target="_blank"}  
 - [참고 - com.mongodb.kafka.connect.sink.processor.PostProcessor.java](https://github.com/mongodb/mongo-kafka/blob/master/src/main/java/com/mongodb/kafka/connect/sink/processor/PostProcessor.java){:target="_blank"}  
 - [참고 - com.mongodb.kafka.connect.sink.processor.KafkaMetaAdder.java](https://github.com/mongodb/mongo-kafka/blob/master/src/main/java/com/mongodb/kafka/connect/sink/processor/KafkaMetaAdder.java){:target="_blank"}  
