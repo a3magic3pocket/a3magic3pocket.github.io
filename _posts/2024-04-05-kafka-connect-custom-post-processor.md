@@ -74,7 +74,6 @@ tags: [kafka, kafka-connect]    # TAG names should always be lowercase
     - (상단 메뉴)Window > Preferences >   
       compiler 검색 후 Java Compiler 선택,  
       Compiler compliance level 11로 변경  
-    -   
 
 ## ObjectIdPostProcessor 코드
 - 설명  
