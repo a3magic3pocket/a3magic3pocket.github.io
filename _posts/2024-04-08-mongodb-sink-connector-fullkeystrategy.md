@@ -40,7 +40,7 @@ tags: [kafka, kafka-connect, mongodb-sink-connector]    # TAG names should alway
           headers=[  
               ConnectHeader(  
                   key=__TypeId__,   
-                  value=com.myapp.api.user.User,   
+                  value=com.myapp.api.expt1.Expt1,   
                   schema=Schema{STRING}  
               )  
           ]  
