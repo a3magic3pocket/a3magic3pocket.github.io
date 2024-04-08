@@ -40,7 +40,7 @@ tags: [kafka, kafka-connect, mongodb-sink-connector]    # TAG names should alway
           headers=[  
               ConnectHeader(  
                   key=__TypeId__,   
-                  value=com.copystagram.api.like.Like,   
+                  value=com.myapp.api.user.User,   
                   schema=Schema{STRING}  
               )  
           ]  
