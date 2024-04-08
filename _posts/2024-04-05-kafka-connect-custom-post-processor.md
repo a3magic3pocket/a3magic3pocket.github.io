@@ -202,6 +202,12 @@ tags: [kafka, kafka-connect]    # TAG names should always be lowercase
           ex) "post.processor.chain": "sinkPostProcessor.ObjectIdPostProcessor"  
         - value.projection.list에 대상 필드명을 콤마 구분하여 입력한다.  
           ex) "value.projection.list": "id,target-id"  
+        - !주의 - PartialValueStrategy 사용불가  
+          ObjectIdPostProcessor의 대상 필드가 PartialValueStrategy 일 경우  
+          writeModel을 ReplaceOneBusinessKeyStrategy로 지정하여도  
+          같은 키를 가진 문서가 갱신되지 않고 추가만 된다.  
+          키로 사용되지 않는 필드를 추가하거나   
+          FullKeyStrategy를 사용하여 대응할 수 있다.  
     - 명령  
       ```bash  
       curl --location 'http://localhost:8083/connectors' \  
@@ -220,9 +226,7 @@ tags: [kafka, kafka-connect]    # TAG names should always be lowercase
               "key.converter.schemas.enable": false,  
               "value.converter.schemas.enable": false,  
               "document.id.strategy.overwrite.existing": true,  
-              "document.id.strategy": "com.mongodb.kafka.connect.sink.processor.id.strategy.PartialValueStrategy",  
-              "document.id.strategy.partial.value.projection.list": "id,targetId",  
-              "document.id.strategy.partial.value.projection.type": "AllowList",  
+              "document.id.strategy": "com.mongodb.kafka.connect.sink.processor.id.strategy.FullKeyStrategy",  
               "writemodel.strategy": "com.mongodb.kafka.connect.sink.writemodel.strategy.ReplaceOneBusinessKeyStrategy",  
               "post.processor.chain": "sinkPostProcessor.ObjectIdPostProcessor",  
               "value.projection.list": "id,targetId"  
