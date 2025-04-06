@@ -404,20 +404,21 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
             - <알람 전송 방식 설정>: Slack, Email 등의 설정 추가  
                 - 슬랙 예시  
                   ```yml  
+                  {% raw %}
                   receivers:  
                     - name: 'slack-notifications'  
                       slack_configs:  
                         - api_url: '<your slack-webhook URL>'  
                           channel: '#alarm'  
-                          text: >  
-{% raw %}                            {{ range $i, .Alerts }}{% endraw %}  
-{% raw %}                            {{ if ne $i 0 }}{% endraw %}  
-                            --  
-{% raw %}                            {{ end }}{% endraw %}  
-{% raw %}                            *Alert:* {{ .Annotations.summary }}\n{% endraw %}  
-{% raw %}                            *Description:* {{ .Annotations.description }}\n{% endraw %}  
-{% raw %}                            *View Alert:* <http://localhost:9093/#/alerts?silenced=false&inhibited=false&active=true&filter=%7Balertname%3D%22{{ .Labels.alertname }}%22%7D|Click here>\n{% endraw %}  
-{% raw %}                            {{ end }}{% endraw %}  
+                          text: >
+                            {{ range $i, .Alerts }}
+                            {{ if ne $i 0 }}\n--\n{{ end }}
+                            *Alert:* {{ .Annotations.summary }}\n
+                            *Description:* {{ .Annotations.description }}\n
+                            *View Alert:* <http://localhost:9093/#/alerts?silenced=false&inhibited=false&active=true&filter=%7Balertname%3D%22{{ .Labels.alertname }}%22%7D|Click here>
+                            {{ end }}
+
+                  {% endraw %}
                   ```  
                 - apj_url  
                     - 유효한 webhook 주소를 반드시 적어야 함  
@@ -468,6 +469,7 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
 - 알람 일부러 일으켜 보기  
     - alert_rules.yml  
       ```yml  
+      {% raw %}
       groups:  
         - name: CPU  
           rules:  
@@ -480,7 +482,8 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
                 severity: critical  
               annotations:  
                 summary: "CPU 사용량 70% 초과 지속"  
-{% raw %}                description: "Instance {{ $labels.instance }} has high CPU usage."{% endraw %}  
+                description: "Instance {{ $labels.instance }} has high CPU usage."
+      {% endraw %}  
       ```  
     - 위 설정을 적용하고 일정 시간 기다림  
     - 이후 slack이나 얼럿매니저를 확인하면 알람 확인 가능  
