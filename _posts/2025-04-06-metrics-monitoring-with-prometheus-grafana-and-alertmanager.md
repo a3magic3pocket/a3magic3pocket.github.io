@@ -288,16 +288,16 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
     - 기본적인 구조  
       ```yml  
       groups:  
-        - name: <그룹_이름>  
+        - name: 그룹_이름  
           rules:  
-            - alert: <알람_이름>  
-              expr: <경고를 발생시킬 조건 (PromQL)>  
-              for: <경고 지속 시간>  
+            - alert: 알람_이름  
+              expr: 경고를 발생시킬 조건 (PromQL)  
+              for: 경고 지속 시간  
               labels:  
-                severity: <경고 심각도>  
+                severity: 경고 심각도  
               annotations:  
-                summary: "<요약 메시지>"  
-                description: "<알람 상세 설명>"  
+                summary: "요약 메시지"  
+                description: "알람 상세 설명"  
       ```  
     - 구체적 설명  
         - groups  
@@ -305,15 +305,15 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
         - rules  
             - 이 그룹 안에서 설정할 개별 알람 목록  
             - 하나의 그룹 안에 여러 개의 알람 추가 가능  
-        - alert: <알람_이름>  
+        - alert: 알람_이름  
             - 알람의 이름  
-        - expr: <경고를 발생시킬 조건 (PromQL)>  
+        - expr: 경고를 발생시킬 조건 (PromQL)  
             - PromQL로 알람 조건을 정의  
             - 예제:  메모리 사용률이 80%를 초과하면 경고  
               ```yml  
               expr: node_memory_Active_bytes / node_memory_MemTotal_bytes > 0.8  
               ```  
-        - for: <경고 지속 시간>  
+        - for: 경고 지속 시간  
             - 경고 조건이 특정 시간 동안 지속될 경우 알람을 발생시킴  
             - 예제:  5분 동안 조건이 충족되면 알람 발생  
                 - for: 5m  
@@ -358,18 +358,18 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
     - 기본적 구조  
       ```yml  
       global:  
-        resolve_timeout: <알람 해제 후 유지 시간>  
+        resolve_timeout: 알람 해제 후 유지 시간  
                 
       route:  
-        group_by: [<알람 그룹 기준>]  
-        group_wait: <최초 알람 대기 시간>  
-        group_interval: <그룹 내 추가 알람 무시 시간>  
-        repeat_interval: <같은 알람 반복 전송 시간>  
-        receiver: <기본 수신자>  
+        group_by: [알람 그룹 기준]  
+        group_wait: 최초 알람 대기 시간  
+        group_interval: 그룹 내 추가 알람 무시 시간  
+        repeat_interval: 같은 알람 반복 전송 시간  
+        receiver: 기본 수신자  
                 
       receivers:  
-        - name: <수신자_이름>  
-          <알람 전송 방식 설정>  
+        - name: 수신자_이름  
+          알람 전송 방식 설정  
       ```  
     - 구체적 설명  
         - global  
@@ -401,7 +401,7 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
         - receivers  
             - 알람을 받을 대상 설정(Slcak, Email 등)  
             - name: 수신자 이름  
-            - <알람 전송 방식 설정>: Slack, Email 등의 설정 추가  
+            - 알람 전송 방식 설정: Slack, Email 등의 설정 추가  
                 - 슬랙 예시  
                   ```yml  
                   {% raw %}
