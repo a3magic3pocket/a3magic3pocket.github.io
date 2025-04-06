@@ -287,17 +287,17 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
         - 구체적인 알림을 설정하는 부분이다.  
     - 기본적인 구조  
       ```yml  
-      groups:  
-        - name: 그룹_이름  
-          rules:  
-            - alert: 알람_이름  
-              expr: 경고를 발생시킬 조건 (PromQL)  
-              for: 경고 지속 시간  
-              labels:  
-                severity: 경고 심각도  
-              annotations:  
-                summary: "요약 메시지"  
-                description: "알람 상세 설명"  
+        groups:  
+          - name: 그룹_이름  
+            rules:  
+              - alert: 알람_이름  
+                expr: 경고를 발생시킬 조건 (PromQL)  
+                for: 경고 지속 시간  
+                labels:  
+                  severity: 경고 심각도  
+                annotations:  
+                  summary: "요약 메시지"  
+                  description: "알람 상세 설명"  
       ```  
     - 구체적 설명  
         - groups  
