@@ -165,18 +165,18 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
 ## 프로메테우스에서 메트릭 수집
 - prometheus.yml  
   ```yml  
-  scrape_configs:  
-    - job_name: 'web'  
-      metrics_path: '/actuator/prometheus'  
-      scheme: 'http'  
-      static_configs:  
-        - targets: ['web:8080']  
-            
-    - job_name: 'web-node_exporter'  
-      metrics_path: '/metrics'  
-      scheme: 'http'  
-      static_configs:  
-        - targets: ['web:9100']  
+    scrape_configs:  
+      - job_name: 'web'  
+        metrics_path: '/actuator/prometheus'  
+        scheme: 'http'  
+        static_configs:  
+          - targets: ['web:8080']  
+              
+      - job_name: 'web-node_exporter'  
+        metrics_path: '/metrics'  
+        scheme: 'http'  
+        static_configs:  
+          - targets: ['web:9100']  
   ```  
 - docker-compose.yml  
   ```yml  
@@ -357,19 +357,19 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
         - receivers - 알림을 받을 대상 설정  
     - 기본적 구조  
       ```yml  
-      global:  
-        resolve_timeout: 알람 해제 후 유지 시간  
-                
-      route:  
-        group_by: [알람 그룹 기준]  
-        group_wait: 최초 알람 대기 시간  
-        group_interval: 그룹 내 추가 알람 무시 시간  
-        repeat_interval: 같은 알람 반복 전송 시간  
-        receiver: 기본 수신자  
-                
-      receivers:  
-        - name: 수신자_이름  
-          알람 전송 방식 설정  
+        global:  
+          resolve_timeout: 알람 해제 후 유지 시간  
+                  
+        route:  
+          group_by: [알람 그룹 기준]  
+          group_wait: 최초 알람 대기 시간  
+          group_interval: 그룹 내 추가 알람 무시 시간  
+          repeat_interval: 같은 알람 반복 전송 시간  
+          receiver: 기본 수신자  
+                  
+        receivers:  
+          - name: 수신자_이름  
+            알람 전송 방식 설정  
       ```  
     - 구체적 설명  
         - global  
