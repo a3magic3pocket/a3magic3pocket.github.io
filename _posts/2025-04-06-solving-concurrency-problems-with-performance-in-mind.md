@@ -199,5 +199,5 @@ tags: [k6, lock, essay]    # TAG names should always be lowercase
   사용하기 어렵다.  
 - 비동기 스케줄러 시간을 줄이면 전반적인 처리 속도는 상승한다.  
 
-## 참고
-- ['concurrency-control-sandbox' github repository](https://github.com/wjchoi-hh/concurrency-control-sandbox){:target="_blank"}  
+## 예시 github repository
+- [concurrency-control-sandbox' github repository](https://github.com/a3magic3pocket/concurrency-control-sandbox){:target="_blank"}  

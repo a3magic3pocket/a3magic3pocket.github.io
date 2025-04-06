@@ -488,8 +488,8 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
     - 위 설정을 적용하고 일정 시간 기다림  
     - 이후 slack이나 얼럿매니저를 확인하면 알람 확인 가능  
 
-## 예시 repository
-- [링크](https://github.com/wjchoi-hh/deployment-sandbox){:target="_blank"}  
+## 예시 github repository
+- [monitoring-sandbox](https://github.com/a3magic3pocket/monitoring-sandbox){:target="_blank"}  
 
 ## 참고
 - [슬랙 웹훅 생성](https://help.ovice.com/hc/ko/articles/16515667939737--Webhook-%EC%84%A4%EC%A0%95-Slack%EC%97%90%EC%84%9C-%EC%95%8C%EB%A6%BC-%EB%B0%9B%EA%B8%B0){:target="_blank"}  

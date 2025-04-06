@@ -445,3 +445,6 @@ tags: [blue-green, essay]    # TAG names should always be lowercase
         - DB가 버전 별로 필요하고 CDC도 사용해야 하므로  
           리소스 소비가 상대적으로 많다.  
         - 동기화 문제로 인해 롤백이 더 복잡하다.  
+
+## 예시 repository
+- [blue-green-deployment-sandbox](https://github.com/a3magic3pocket/blue-green-deployment-sandbox){:target="_blank"}  
