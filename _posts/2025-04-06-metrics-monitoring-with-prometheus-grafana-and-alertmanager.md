@@ -379,7 +379,7 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
                 - 알람 조건이 충족되어 알람이 전송된 후  
                   운영자가 조치하여 알람 조건이 해제되었다고 하자.  
                   그 상태가 resolve_timeout 시간만큼 지나면 "해제됨" 상태가 된다.  
-                  이때 슬랙에 "정상"이라고 메세지를 보낼 수 있게 된다.  
+                  헤제됨 상태가 되면 프로메테우스에서 해당 알람 상태가 inactive 된다.  
         - route  
             - 알람을 그룹화하고 전달하는 방식  
             - group_by  
@@ -420,7 +420,7 @@ tags: [prometheus, grafana, alertmanager, essay]    # TAG names should always be
 
                   {% endraw %}
                   ```  
-                - apj_url  
+                - api_url  
                     - 유효한 webhook 주소를 반드시 적어야 함  
                     - [슬랙 웹훅 생성법](https://help.ovice.com/hc/ko/articles/16515667939737--Webhook-%EC%84%A4%EC%A0%95-Slack%EC%97%90%EC%84%9C-%EC%95%8C%EB%A6%BC-%EB%B0%9B%EA%B8%B0){:target="_blank"}  
                       (1~13번까지 따라하고 웹훅 URL 복사하여 api_url에 붙여넣기)  

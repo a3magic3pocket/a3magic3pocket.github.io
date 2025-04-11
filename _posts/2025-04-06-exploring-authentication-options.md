@@ -24,7 +24,7 @@ tags: [jwt, essay]    # TAG names should always be lowercase
 - JWT(Json Web Token)  
     - 인증정보를 key-value 저장소에 저장하는게 아니라  
       사용자 고유키를 포함한 몇 가지 정보를  
-      쿠키에 담거나, 응답으로 준뒤 헤더(Authorization) 받는 방법이다.  
+      쿠키에 담거나, 응답으로 준 뒤 헤더(Authorization) 받는 방법이다.  
     - 이때 클라이언트에서 임의로 사용자 고유키를 변경하는 것을   
       막기 위해 전자서명을 담아서 위조를 방지한다.  
     - 전자서명(Signature) 생성  
@@ -181,7 +181,7 @@ tags: [jwt, essay]    # TAG names should always be lowercase
     - 장점  
         - Refresh 토큰이 탈취되어도 사용자 식별자는 탈취되지 않는다.  
     - 단점  
-        - Access 토큰이 만료될 때마다 key-value를 조회한다.  
+        - Access 토큰이 만료될 때마다 key-value 저장소를 조회한다.  
         - 이 경우에도 세션보다는 key-value 저장소 조회 빈도는 적다.  
         - 세션은 매 요청마다 key-value 저장소를 조회해야 하지만  
           Refresh UUID 에서는 Access 토큰 만료 후 요청 시에만   
@@ -230,7 +230,7 @@ tags: [jwt, essay]    # TAG names should always be lowercase
         - Refresh 토큰으로 Access 토큰을 새로 발행한다.  
         - 이때 공격자가 의도적으로 잘못된 Access 토큰을 넣을 가능성도 있으므로  
           CSRF 토큰을 도입하여 의도하지 않은 악의적 요청을 최대한 막는다.  
-    - Refresh 토큰도 유효하고 Access 토큰도 유효하자  
+    - Refresh 토큰도 유효하고 Access 토큰도 유효하다.  
         - 기존에 발행된 Access 토큰으로 인증 처리를 한다.  
 
 ## 가장 보안적으로 그나마 안정적인 방식

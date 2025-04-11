@@ -14,14 +14,14 @@ tags: [blue-green, essay]    # TAG names should always be lowercase
   안전하게 전환하기 위해서  
 
 ## 작동 방식
-- 1. 블루 환경에서 운영 중  
+1. 블루 환경에서 운영 중  
     - 기존 애플리케이션(블루)이 사용자의 모든 트래픽을 처리하고 있음  
-- 2. 그린 환경에서 새 버전 배포  
+2. 그린 환경에서 새 버전 배포  
     - 새로운 애플리케이션 버전을 그린 환경에 배포한 뒤 테스트 수행  
-- 3. 트래픽 전환  
+3. 트래픽 전환  
     - 모든 트래픽을 블루 환경에서 그린 환경으로 전환  
     - 이 작업은 로드밸런서를 재설정하거나 DNS를 업데이트 하는 방식으로 수행  
-- 4. 블루 환경 유지(롤백 대비)  
+4. 블루 환경 유지(롤백 대비)  
     - 그린 환경으로의 전환 후에도 블루 환경은 일정 시간 동안 유지하며  
       문제가 발생하면 즉시 롤백할 수 있도록 준비  
 
@@ -346,7 +346,9 @@ tags: [blue-green, essay]    # TAG names should always be lowercase
                 
                 
         server1-green:  
+          # | -- 수정 시작 -- |
           image: server-green:0.0.2  
+          # | -- 수정 끝 -- |
           container_name: server1-green  
           command:  
             - "java"  
@@ -370,7 +372,9 @@ tags: [blue-green, essay]    # TAG names should always be lowercase
                 
                 
         server2-green:  
+          # | -- 수정 시작 -- |
           image: server-green:0.0.2  
+          # | -- 수정 끝 -- |
           container_name: server2-green  
           command:  
             - "java"  

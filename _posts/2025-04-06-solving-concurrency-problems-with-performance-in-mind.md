@@ -173,8 +173,11 @@ tags: [k6, lock, essay]    # TAG names should always be lowercase
 - optimistic lock의 경우, 실패 후 재시도 시간을 너무 길게 잡으면  
   처리 속도가 엄청나게 느려지며, 재시도 시간이 너무 긴 경우   
   DB 타임아웃이 발생하여 트랜잭션이 실패한다.  
-- pessimistic lock과 optimistic lock 모두 시나리오 3번보다 4번이 테스트 종료 시간이 더 짧았다.  
-- optimistic lock의 (시나리오 3번 테스트 종료 시간 - 시나리오 4번 테스트 종료 시간)이 pessimistic lock보다 더 크다.  
+- 읽기 비중이 높은 환경에서는 모든 케이스에서 처리시간이 단축되었으며,  
+  특히 Optimistic lock은 Pessimistic lock보다 더 큰 성능 개선 효과를 보였다.  
+- pessimistic lock과 optimistic lock 모두에서   
+  시나리오 3번(쓰기:읽기 = 1:1)보다 4번(쓰기:읽기=1:9)이 테스트 종료 시간이 더 짧았다.  
+  또한 시나리오 3과 4 간의 성능 향상 폭은 Optimistic lock에서 더 크게 나타났다.  
 - `단일 스레드, 비동기 배치 처리`는 모든 시나리오에서 상대적으로 일정한 처리 속도를 보인다.  
 - `단일 스레드, 비동기 배치 처리`는 처리가 비동기로 이뤄지기 때문에  
   테스트가 종료된 후 일정 시간이 지나야 처리가 완료된다.  
@@ -195,9 +198,9 @@ tags: [k6, lock, essay]    # TAG names should always be lowercase
    pessimistic lock보다 더 처리속도가 빠를 것으로 추정한다.  
 - `단일 스레드, 비동기 배치 처리` 는 다른 방법에 비해   
   상대적으로 균일한 처리 속도를 보여준다.  
-- 하지만 비동기이기 때문에 실시간으로 조회가 이뤄져야 하는 경우  
+  하지만 비동기이기 때문에 실시간으로 조회가 이뤄져야 하는 경우  
   사용하기 어렵다.  
-- 비동기 스케줄러 시간을 줄이면 전반적인 처리 속도는 상승한다.  
+  비동기 스케줄러 시간을 줄이면 전반적인 처리 속도는 상승한다.  
 
 ## 예시 github repository
-- [concurrency-control-sandbox' github repository](https://github.com/a3magic3pocket/concurrency-control-sandbox){:target="_blank"}  
+- [concurrency-control-sandbox](https://github.com/a3magic3pocket/concurrency-control-sandbox){:target="_blank"}  
