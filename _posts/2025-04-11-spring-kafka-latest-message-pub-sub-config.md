@@ -252,7 +252,5 @@ class UserConsumer(
   따라서  스프링이 종료되면 userConsume 객체도 자동으로 종료된다.  
 
 ## 참고
-
-## [Spring.io - Seeking to a Specific Offset](https://docs.spring.io/spring-kafka/reference/kafka/seek.html)
-
-## [Spring.io - Message Listener Conatiners](https://docs.spring.io/spring-kafka/reference/kafka/receiving-messages/message-listener-container.html)
+- [Spring.io - Seeking to a Specific Offset](https://docs.spring.io/spring-kafka/reference/kafka/seek.html)
+- [Spring.io - Message Listener Conatiners](https://docs.spring.io/spring-kafka/reference/kafka/receiving-messages/message-listener-container.html)

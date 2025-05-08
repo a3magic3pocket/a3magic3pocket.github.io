@@ -54,8 +54,8 @@ tags: [blue-green, essay]    # TAG names should always be lowercase
     - 서버1에서 테스트 용 PC 접근 경로 설정  
         - 테스트용 PC IP만 블루 또는 그린에   
           선택적으로 접근할 수 있도록 nginx 설정  
-- 1. 블루 환경에서 운영 중  
-- 2. 그린 환경에서 새 버전 배포  
+1. 블루 환경에서 운영 중  
+2. 그린 환경에서 새 버전 배포  
     - 서버2, 서버3에서 새 버전 my-server:0.0.2를 확보한다.  
     - 새 버전 my-server:0.0.2는   
       docker-registry 서버에 pull 하는 방식으로 가져올 수도 있고  
@@ -63,10 +63,10 @@ tags: [blue-green, essay]    # TAG names should always be lowercase
     - 블루 환경 컨테이너는 그대로 둔 채  
       그린 환경 컨테이너를 my-server:0.0.2로 다시 올린다.  
     - 테스트용 PC에서 테스트를 진행한다.  
-- 3. 트래픽 전환  
+3. 트래픽 전환  
     - nginx 로드밸런서에서 트래픽이 그린을 바라보도록  
       설정을 변경하고 리로드 한다.  
-- 4. 블루 환경 유지(롤백 대비)  
+4. 블루 환경 유지(롤백 대비)  
 
 ## 로컬에서 온프레미스 환경 블루 - 그린 배포 실험
 - 가정  
